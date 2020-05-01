@@ -17,6 +17,6 @@ public class Controller implements Initializable {
         //some code that starts in the loading of the scene
     }
 
-    
+
 
 }
