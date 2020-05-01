@@ -45,15 +45,22 @@ public class RTools {
     //please don't modify its content without asking me, (I am Robert)
     public static void startScript(){
         createASimualtion("The very first simulation");
+        Person person = new Person("Mock Person");
+        Product product = new Product("A product", 1);
+        DataHolder.personInFocus = person;
+        DataHolder.productInFocus = product;
+        DataHolder.personInFocus.products.add(product);
+        DataHolder.simulationInFocus.population.add(person);
     }
 
     //This method creates a Simulation()
     public static void createASimualtion(String nameOfSimulation){
         Simulation sim = new Simulation(nameOfSimulation);
         DataHolder.simulations.add(sim);
+        DataHolder.simulationInFocus = sim;
     }
 
-    //This method creates a Person (for now is a mock method)
+    //This method creates a new Person (for now is a mock method)
     public static void createAPerson(String nameOfPerson){
         System.out.println("A person has been created with the name " + nameOfPerson);
     }
@@ -63,7 +70,7 @@ public class RTools {
         System.out.println("A person has been edited and the new name is " + nameOfPerson);
     }
 
-    //This method creates a Product (for now is a mock method)
+    //This method creates a new Product (for now is a mock method)
     public static void createAProduct(String titleOfProduct){
         System.out.println("A product has been created with the title " + titleOfProduct);
     }
