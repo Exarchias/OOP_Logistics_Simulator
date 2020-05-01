@@ -23,6 +23,7 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+        RTools.startScript(); //initializes the application correctly
         launch(args);
     }
 

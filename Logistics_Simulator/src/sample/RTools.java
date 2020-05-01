@@ -4,12 +4,42 @@ public class RTools {
     //Robert: This is the place where static methods that are used in many places are located
 
     //This method helps with the transition from one page to another.
+    //but if the user is not logged in he gets kicked to login page
     public static void goToScene(String theSceneName) throws Exception {
-        Main.getInstance().setScene(theSceneName); //this little line does the transition to the other scene.
+        if(DataHolder.isLoggedIn()){
+            Main.getInstance().setScene(theSceneName); //this little line does the transition to the other scene.
+        } else {
+            Main.getInstance().setScene("sample"); //this little line does the transition to the other scene.
+        }
     }
 
     //This method does the logout in a specific way.
     public static void logout() throws Exception {
+        DataHolder.setLoggedIn(false);
         Main.getInstance().setScene("sample"); //this little line does the transition to the other scene.
+    }
+
+    //this method kicks the user if he is not logged in.
+    public static void kickIfNotLoggedIn(){
+        if(!DataHolder.isLoggedIn()){
+            try {
+                RTools.goToScene("sample");
+                System.out.println("you are kicked because you are not logged in");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    //This method is added to the main. is like the initialization but for the applacation.
+    //please don't modify its content without asking me, (I am Robert)
+    public static void startScript(){
+        createASimualtion("The very first simulation");
+    }
+
+    //This method creates a Simulation()
+    public static void createASimualtion(String nameOfSimulation){
+        Simulation sim = new Simulation(nameOfSimulation);
+        DataHolder.simulations.add(sim);
     }
 }

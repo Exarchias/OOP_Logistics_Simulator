@@ -17,7 +17,8 @@ public class DashBoardController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //some code that starts in the loading of the scene
-        System.out.println("You are logged in!");
+        RTools.kickIfNotLoggedIn();
+        System.out.println("You are in the dashboard!");
     }
 
     @FXML

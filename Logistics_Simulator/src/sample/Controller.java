@@ -25,6 +25,7 @@ public class Controller implements Initializable {
 
     @FXML
     public void clickedOnLogin() throws Exception {
+        DataHolder.setLoggedIn(true);
         RTools.goToScene("dashboard");
     }
 
