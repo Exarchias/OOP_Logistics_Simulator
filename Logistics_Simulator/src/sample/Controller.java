@@ -25,7 +25,7 @@ public class Controller implements Initializable {
 
     @FXML
     public void clickedOnLogin() throws Exception {
-        Main.getInstance().setScene("dashboard"); //this little line does the transition to the other scene.
+        RTools.goToScene("dashboard");
     }
 
 

@@ -22,6 +22,6 @@ public class DashBoardController implements Initializable {
 
     @FXML
     public void clickedOnLogout() throws Exception {
-        Main.getInstance().setScene("sample"); //this little line does the transition to the other scene.
+        RTools.logout();
     }
 }
