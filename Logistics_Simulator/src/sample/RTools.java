@@ -19,6 +19,16 @@ public class RTools {
         Main.getInstance().setScene("sample"); //this little line does the transition to the other scene.
     }
 
+    //This method takes the user to the dashboard.
+    //but if the user is not logged in he gets kicked to login page
+    public static void goToDashBoard() throws Exception {
+        if(DataHolder.isLoggedIn()){
+            Main.getInstance().setScene("dashboard"); //this little line does the transition to the other scene.
+        } else {
+            Main.getInstance().setScene("sample"); //this little line does the transition to the other scene.
+        }
+    }
+
     //this method kicks the user if he is not logged in.
     public static void kickIfNotLoggedIn(){
         if(!DataHolder.isLoggedIn()){
@@ -41,5 +51,25 @@ public class RTools {
     public static void createASimualtion(String nameOfSimulation){
         Simulation sim = new Simulation(nameOfSimulation);
         DataHolder.simulations.add(sim);
+    }
+
+    //This method creates a Person (for now is a mock method)
+    public static void createAPerson(String nameOfPerson){
+        System.out.println("A person has been created with the name " + nameOfPerson);
+    }
+
+    //This method edits a Person (for now is a mock method)
+    public static void editAPerson(String nameOfPerson){
+        System.out.println("A person has been edited and the new name is " + nameOfPerson);
+    }
+
+    //This method creates a Product (for now is a mock method)
+    public static void createAProduct(String titleOfProduct){
+        System.out.println("A product has been created with the title " + titleOfProduct);
+    }
+
+    //This method edits a Product (for now is a mock method)
+    public static void editAProduct(String titleOfProduct){
+        System.out.println("A product has been edited and the new title is " + titleOfProduct);
     }
 }
