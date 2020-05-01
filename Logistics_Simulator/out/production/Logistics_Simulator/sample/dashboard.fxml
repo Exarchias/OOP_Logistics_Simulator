@@ -6,5 +6,9 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DashBoardController">
    <children>
       <Button fx:id="logoutBtn" layoutX="362.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#clickedOnLogout" text="Logout" />
+      <Button fx:id="createPersonBtn" layoutX="284.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#clickedCreatePerson" text="Create Person" />
+      <Button fx:id="createProductBtn" layoutX="284.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#clickedCreateProduct" text="Create Product" />
+      <Button fx:id="editPersonBtn" layoutX="416.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#clickedEditPerson" text="Edit Person" />
+      <Button fx:id="editProductBtn" layoutX="414.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#clickedEditProduct" text="Edit Product" />
    </children>
 </AnchorPane>
