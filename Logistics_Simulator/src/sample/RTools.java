@@ -29,6 +29,7 @@ public class RTools {
         }
     }
 
+
     //this method kicks the user if he is not logged in.
     public static void kickIfNotLoggedIn(){
         if(!DataHolder.isLoggedIn()){
