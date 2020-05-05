@@ -51,7 +51,6 @@ public class DashBoardController implements Initializable {
     @FXML
     public void clickedCreateProduct() throws Exception {
         RTools.goToScene("createProduct");
-
     }
 
     @FXML

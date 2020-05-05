@@ -29,7 +29,6 @@ public class RTools {
         }
     }
 
-
     //this method kicks the user if he is not logged in.
     public static void kickIfNotLoggedIn(){
         if(!DataHolder.isLoggedIn()){
@@ -80,5 +79,4 @@ public class RTools {
     public static void editAProduct(String titleOfProduct){
         System.out.println("A product has been edited and the new title is " + titleOfProduct);
     }
-
 }
