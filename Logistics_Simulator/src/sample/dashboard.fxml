@@ -11,6 +11,6 @@
       <Button fx:id="editPersonBtn" layoutX="416.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#clickedEditPerson" text="Edit Person" />
       <Button fx:id="editProductBtn" layoutX="414.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#clickedEditProduct" text="Edit Product" />
       <Button fx:id="createSimulationBtn" layoutX="277.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#clickedCreateSimulation" text="Create Simulation" />
-      <Button fx:id="editSimulationBtn" layoutX="414.0" layoutY="154.0" mnemonicParsing="false" text="Edit Simulations" />
+      <Button fx:id="editSimulationBtn" layoutX="414.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#clickedEditSimulation" text="Edit Simulations" />
    </children>
 </AnchorPane>

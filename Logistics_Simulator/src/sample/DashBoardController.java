@@ -64,6 +64,9 @@ public class DashBoardController implements Initializable {
     public void clickedCreateSimulation() throws Exception {
         RTools.goToScene("createSimulation");
     }
+    public void clickedEditSimulation() throws Exception {
+        RTools.goToScene("editSimulation");
+    }
 
 
 
