@@ -26,7 +26,11 @@ public class EditSimulationController implements Initializable {
 
     public void clickedOnSubmit(){
         String title = simulationTxtField.getText();
-
+        if (!title.equalsIgnoreCase("")){
+            RTools.editASimulation(title);
+        }else {
+            RTools.editASimulation("Default Simulation");
+        }
 
     }
 
