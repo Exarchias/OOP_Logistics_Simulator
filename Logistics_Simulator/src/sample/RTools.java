@@ -1,5 +1,9 @@
 package sample;
 
+import javafx.scene.control.ListView;
+
+import java.util.ArrayList;
+
 public class RTools {
     //Robert: This is the place where static methods that are used in many places are located
 
@@ -83,6 +87,11 @@ public class RTools {
         System.out.println("The saved name of person is " + DataHolder.personInFocus.getName());
     }
 
+    //this method deletes a pesron, (for now is a mock method)
+    public static void deletePerson(int number){
+        System.out.println("You deleted the person with the number: " + number);
+    }
+
     //This method creates a new Product (for now is a mock method)
     public static void createAProduct(String titleOfProduct) {
         DataHolder.productInFocus.setTitle(titleOfProduct);
@@ -99,6 +108,12 @@ public class RTools {
         System.out.println("A product with this title: "+tmpTitle + " has been edited and the new title is " + titleOfProduct);
         System.out.println("The saved title of product is " + titleOfProduct);
     }
+
+    //this method deletes a product, (for now is a mock method)
+    public static void deleteProduct(int number){
+        System.out.println("You deleted the product with the number: " + number);
+    }
+
     //MOCK METHOD
     public static void editASimulation(String titleOfSimulation){
         String previousTitleOfSimulation = DataHolder.simulationInFocus.getTitle();
@@ -109,5 +124,10 @@ public class RTools {
         System.out.println("A simulation with this name " + tmpSimulationTitle + " has been edited and the new title is " + titleOfSimulation);
         System.out.println("the saved title of simulation is "+ titleOfSimulation);
 
+    }
+
+    //this method deletes a simulation, (for now is a mock method)
+    public static void deleteSimulationt(int number){
+        System.out.println("You deleted the simulation with the number: " + number);
     }
 }

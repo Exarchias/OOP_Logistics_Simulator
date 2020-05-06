@@ -3,11 +3,18 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class PersonGUIController implements Initializable {
+    int indexNumber = 0;
+
+    @FXML
+    ListView<String> personListView;
 
     @FXML
     Button logoutBtn;
@@ -51,6 +58,25 @@ public class PersonGUIController implements Initializable {
     @FXML
     public void clickedEditPerson() throws Exception {
         RTools.goToScene("editPerson");
+    }
+
+    @FXML
+    public void clickedDeletePerson() throws Exception {
+        RTools.deletePerson(indexNumber);
+    }
+
+    //Displays the content of an array to the ListView. Tricky method. the idea is that you change only the array list
+    //and the ListView and keep everything else in place.
+    //Lavdim leave this method as it is. We have only one ArrayList at the moment.
+    public void displayListView(){
+        if(!DataHolder.simulations.isEmpty()){ //change the arraylist here.
+            for (Simulation sim : DataHolder.simulations){ //change this here
+                personListView.getItems().add(sim.getTitle());
+            }
+        } else {
+            personListView.getItems().add("The list is empty");
+        }
+        personListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
 
