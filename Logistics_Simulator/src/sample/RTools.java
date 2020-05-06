@@ -58,6 +58,7 @@ public class RTools {
         Simulation sim = new Simulation(nameOfSimulation);
         DataHolder.simulations.add(sim);
         DataHolder.simulationInFocus = sim;
+        System.out.println("This simulation has been created: " + nameOfSimulation);
     }
 
     //This method creates a new Person (for now is a mock method)
