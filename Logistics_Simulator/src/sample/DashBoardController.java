@@ -23,9 +23,9 @@ public class DashBoardController implements Initializable {
 
     @FXML
     Button editProductBtn;
-
+    @FXML
     Button createSimulationBtn;
-
+    @FXML
     Button editSimulationBtn;
 
     //All the scenes should implement the Initializable interface
@@ -61,9 +61,11 @@ public class DashBoardController implements Initializable {
     public void clickedEditProduct() throws Exception {
         RTools.goToScene("editProduct");
     }
+    @FXML
     public void clickedCreateSimulation() throws Exception {
         RTools.goToScene("createSimulation");
     }
+    @FXML
     public void clickedEditSimulation() throws Exception {
         RTools.goToScene("editSimulation");
     }

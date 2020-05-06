@@ -71,14 +71,16 @@ public class RTools {
     //This method edits a Person (for now is a mock method)
     public static void editAPerson(String nameOfPerson) {
        String previousName = DataHolder.personInFocus.getName();
-        System.out.println("THIS IS PREVIOUS NAME: " + previousName);
+
         String tmpName = previousName;
-        System.out.println("THIS IS TMPNAME: " + tmpName);
+
         previousName = nameOfPerson;
-        System.out.println("THIS IS PREVIUS NAME 1 " + previousName);
+
         nameOfPerson = previousName;
-        System.out.println("THIS IS nameOfPerson " + nameOfPerson);
+
+        DataHolder.personInFocus.setName(nameOfPerson);
         System.out.println("A person with this name: " + tmpName +" has been edited and the new name is " + nameOfPerson);
+        System.out.println("The saved name of person is " + DataHolder.personInFocus.getName());
     }
 
     //This method creates a new Product (for now is a mock method)
@@ -93,10 +95,19 @@ public class RTools {
         String tmpTitle = previousTitleOfProduct;
         previousTitleOfProduct = titleOfProduct;
         titleOfProduct = previousTitleOfProduct;
+        DataHolder.productInFocus.setTitle(titleOfProduct);
         System.out.println("A product with this title: "+tmpTitle + " has been edited and the new title is " + titleOfProduct);
+        System.out.println("The saved title of product is " + titleOfProduct);
     }
     //MOCK METHOD
     public static void editASimulation(String titleOfSimulation){
-        System.out.println("A simulation has been edited and the new title is " + titleOfSimulation);
+        String previousTitleOfSimulation = DataHolder.simulationInFocus.getTitle();
+        String tmpSimulationTitle = previousTitleOfSimulation;
+        previousTitleOfSimulation = titleOfSimulation;
+       titleOfSimulation = previousTitleOfSimulation;
+        DataHolder.simulationInFocus.setTitle(titleOfSimulation);
+        System.out.println("A simulation with this name " + tmpSimulationTitle + " has been edited and the new title is " + titleOfSimulation);
+        System.out.println("the saved title of simulation is "+ titleOfSimulation);
+
     }
 }
