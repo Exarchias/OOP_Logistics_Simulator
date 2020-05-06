@@ -83,12 +83,17 @@ public class RTools {
 
     //This method creates a new Product (for now is a mock method)
     public static void createAProduct(String titleOfProduct) {
+        DataHolder.productInFocus.setTitle(titleOfProduct);
         System.out.println("A product has been created with the title " + titleOfProduct);
     }
 
     //This method edits a Product (for now is a mock method)
     public static void editAProduct(String titleOfProduct) {
-        System.out.println("A product has been edited and the new title is " + titleOfProduct);
+        String previousTitleOfProduct = DataHolder.productInFocus.getTitle();
+        String tmpTitle = previousTitleOfProduct;
+        previousTitleOfProduct = titleOfProduct;
+        titleOfProduct = previousTitleOfProduct;
+        System.out.println("A product with this title: "+tmpTitle + " has been edited and the new title is " + titleOfProduct);
     }
     //MOCK METHOD
     public static void editASimulation(String titleOfSimulation){

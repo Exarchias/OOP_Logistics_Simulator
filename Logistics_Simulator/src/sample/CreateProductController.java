@@ -33,9 +33,9 @@ public class CreateProductController implements Initializable {
     public void clickedOnSubmit(){
         String text = nameTextField.getText();
         if(!text.equalsIgnoreCase("")){
-            RTools.createAPerson(text);
+            RTools.createAProduct(text);
         } else {
-            RTools.createAPerson("Robert");
+            RTools.createAProduct("Robert");
         }
 
     }
