@@ -34,7 +34,7 @@ public class CreatePersonController implements Initializable {
         if(!text.equalsIgnoreCase("")){
             RTools.createAPerson(text);
         } else {
-            RTools.createAPerson("Robert");
+            RTools.createAPerson("Default Person");
         }
 
     }

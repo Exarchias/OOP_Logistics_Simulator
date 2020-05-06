@@ -35,7 +35,7 @@ public class CreateProductController implements Initializable {
         if(!text.equalsIgnoreCase("")){
             RTools.createAProduct(text);
         } else {
-            RTools.createAProduct("Robert");
+            RTools.createAProduct("Default Product");
         }
 
     }

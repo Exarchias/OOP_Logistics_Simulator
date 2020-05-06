@@ -23,7 +23,7 @@ public class EditSimulationController implements Initializable {
     @FXML
     private Button goToDashboarBtn;
 
-
+    @FXML
     public void clickedOnSubmit(){
         String title = simulationTxtField.getText();
         if (!title.equalsIgnoreCase("")){
@@ -33,7 +33,7 @@ public class EditSimulationController implements Initializable {
         }
 
     }
-
+  @FXML
     public void clickedOnToDashboard() throws Exception {
         RTools.goToDashBoard();
     }

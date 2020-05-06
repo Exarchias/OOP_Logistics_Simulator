@@ -24,7 +24,7 @@ public class CreateSimulationController implements Initializable {
 
     @FXML
     private Button btngotodashboard;
-
+    @FXML
     public void clickedOnSubmit(){
         String title = txtTitle.getText();
         if (!title.equalsIgnoreCase("")){
@@ -35,7 +35,7 @@ public class CreateSimulationController implements Initializable {
 
 
     }
-
+     @FXML
     public void clickedOnToDashboard() throws Exception {
         RTools.goToDashBoard();
     }

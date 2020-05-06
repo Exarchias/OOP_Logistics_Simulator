@@ -37,7 +37,7 @@ public class EditProductController implements Initializable {
         if (!text.equalsIgnoreCase("")) {
             RTools.editAProduct(text);
         } else {
-            RTools.editAProduct("Robert");
+            RTools.editAProduct("Defeault Product");
         }
 
     }
