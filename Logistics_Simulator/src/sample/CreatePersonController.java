@@ -28,6 +28,7 @@ public class CreatePersonController implements Initializable {
     Button toDashboardBtn;
 
 
+
     @FXML
     public void clickedOnSubmit(){
         String text = nameTextField.getText();
