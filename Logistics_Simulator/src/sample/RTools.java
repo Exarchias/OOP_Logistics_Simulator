@@ -63,12 +63,22 @@ public class RTools {
 
     //This method creates a new Person (for now is a mock method)
     public static void createAPerson(String nameOfPerson) {
+        //Person person = new Person(nameOfPerson);
+        DataHolder.personInFocus.setName(nameOfPerson);
         System.out.println("A person has been created with the name " + nameOfPerson);
     }
 
     //This method edits a Person (for now is a mock method)
     public static void editAPerson(String nameOfPerson) {
-        System.out.println("A person has been edited and the new name is " + nameOfPerson);
+       String previousName = DataHolder.personInFocus.getName();
+        System.out.println("THIS IS PREVIOUS NAME: " + previousName);
+        String tmpName = previousName;
+        System.out.println("THIS IS TMPNAME: " + tmpName);
+        previousName = nameOfPerson;
+        System.out.println("THIS IS PREVIUS NAME 1 " + previousName);
+        nameOfPerson = previousName;
+        System.out.println("THIS IS nameOfPerson " + nameOfPerson);
+        System.out.println("A person with this name: " + tmpName +" has been edited and the new name is " + nameOfPerson);
     }
 
     //This method creates a new Product (for now is a mock method)

@@ -19,6 +19,7 @@ public class EditPersonController implements Initializable {
         //some code that starts in the loading of the scene
         RTools.kickIfNotLoggedIn();
         System.out.println("You are in the edit person scene!");
+        nameTextField.setText(DataHolder.personInFocus.getName());
     }
 
     @FXML
@@ -35,9 +36,9 @@ public class EditPersonController implements Initializable {
     public void clickedOnSubmit(){
         String text = nameTextField.getText();
         if(!text.equalsIgnoreCase("")){
-            RTools.createAPerson(text);
+            RTools.editAPerson(text);
         } else {
-            RTools.createAPerson("Robert");
+            RTools.editAPerson("Default Person");
         }
 
     }
