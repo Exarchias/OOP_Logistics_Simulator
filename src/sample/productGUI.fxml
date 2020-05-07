@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ProductGUIController">
+   <children>
+      <ListView fx:id="productListView" layoutX="63.0" layoutY="56.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="createProductBtn" layoutX="63.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#clickedCreateProduct" text="Create Product" />
+      <Button fx:id="editProductBtn" layoutX="195.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#clickedEditProduct" text="Edit Product" />
+      <Button fx:id="deleteProductBtn" layoutX="300.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#clickedDeleteProduct" text="Delete Product" />
+      <Button fx:id="logoutBtn" layoutX="466.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#clickedOnLogout" text="Logout" />
+      <Button fx:id="toDashboardBtn" layoutX="467.0" layoutY="131.0" mnemonicParsing="false" onMouseClicked="#clickedOnToDashboard" text="Back To Dashboard" />
+   </children>
+</AnchorPane>
