@@ -15,6 +15,6 @@
       <Button fx:id="personGUIBtn" layoutX="86.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#clickedPersonGUI" text="Persons" />
       <Button fx:id="productGUIBtn" layoutX="84.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#clickedProductGUI" text="Products" />
       <Button fx:id="simulationGUIBtn" layoutX="84.0" layoutY="133.0" mnemonicParsing="false" onMouseClicked="#clickedSimulationGUI" text="Simulations" />
-      <Button fx:id="outcomeGUIBtn" layoutX="84.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#clickedOutcomeGUI" text="Outcomes" />
+      <Button fx:id="outcomeGUIBtn" layoutX="84.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#clickedOutcomeGUI" text="Outputs" />
    </children>
 </AnchorPane>

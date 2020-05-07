@@ -10,7 +10,7 @@ public class DataHolder {
     public static ArrayList<Simulation> simulations = new ArrayList<>();
     public static ArrayList<Product> products = new ArrayList<>();
     public static ArrayList<Person> persons = new ArrayList<>();
-    public static ArrayList<Simulation> outcomes = new ArrayList<>();
+    public static ArrayList<Output> outputs = new ArrayList<>();
 
 
     public static boolean isLoggedIn() {

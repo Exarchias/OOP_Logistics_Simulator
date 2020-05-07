@@ -103,7 +103,7 @@ public class DashBoardController implements Initializable {
 
     @FXML
     public void clickedOutcomeGUI() throws Exception {
-        RTools.goToScene("outcomeGUI");
+        RTools.goToScene("outputGUI");
     }
 
 

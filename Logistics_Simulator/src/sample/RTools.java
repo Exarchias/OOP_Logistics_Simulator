@@ -48,10 +48,13 @@ public class RTools {
     //This method is added to the main. is like the initialization but for the applacation.
     //please don't modify its content without asking me, (I am Robert)
     public static void startScript() {
+        Output output = new Output("an output");
         createASimualtion("The very first simulation");
         createAPerson("Mock Person");
         createAProduct("a brand new product");
         DataHolder.simulationInFocus.population.add(DataHolder.personInFocus);
+        output.persons = DataHolder.persons;
+        DataHolder.outputs.add(output);
     }
 
     //This method creates a Simulation
@@ -117,9 +120,15 @@ public class RTools {
 
     }
 
-    //this method deletes a simulation, (for now is a mock method)
+    //this method deletes a simulation
     public static void deleteSimulationt(int number){
         DataHolder.simulations.remove(number);
+        System.out.println("You deleted the simulation with the number: " + number);
+    }
+
+    //this method deletes an output
+    public static void deleteOutput(int number){
+        DataHolder.outputs.remove(number);
         System.out.println("You deleted the simulation with the number: " + number);
     }
 }
