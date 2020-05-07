@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,7 +15,9 @@ public class SimulationGUIController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         RTools.kickIfNotLoggedIn();
+        displayListView();
         System.out.println("You are in the simulations' GUI scene!");
+
     }
 
     @FXML
@@ -27,7 +30,7 @@ public class SimulationGUIController implements Initializable {
     private Button deleteSimulationBtn;
 
     @FXML
-    private ListView<?> simulationListView;
+    private ListView<String> simulationListView;
 
     @FXML
     private Button logoutBtn;
@@ -58,5 +61,19 @@ public class SimulationGUIController implements Initializable {
     @FXML
     public void clickedDeleteSimulation() throws Exception {
         RTools.deleteSimulationt(indexNumber);
+    }
+
+    //Displays the content of an array to the ListView. Tricky method. the idea is that you change only the array list
+    //and the ListView and keep everything else in place.
+    //Lavdim leave this method as it is. We have only one ArrayList at the moment.
+    public void displayListView(){
+        if(!DataHolder.simulations.isEmpty()){ //change the arraylist here.
+            for (Simulation sim : DataHolder.simulations){ //change this here
+                simulationListView.getItems().add(sim.getTitle());
+            }
+        } else {
+            simulationListView.getItems().add("The list is empty");
+        }
+        simulationListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 }

@@ -52,7 +52,9 @@ public class RTools {
         Person person = new Person("Mock Person");
         Product product = new Product("A product", 1);
         DataHolder.personInFocus = person;
+        DataHolder.persons.add(person);
         DataHolder.productInFocus = product;
+        DataHolder.products.add(product);
         DataHolder.personInFocus.products.add(product);
         DataHolder.simulationInFocus.population.add(person);
     }

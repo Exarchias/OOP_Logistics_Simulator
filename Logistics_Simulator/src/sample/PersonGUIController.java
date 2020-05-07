@@ -38,6 +38,7 @@ public class PersonGUIController implements Initializable {
         //some code that starts in the loading of the scene
         RTools.kickIfNotLoggedIn();
         System.out.println("You are in the persons' GUI scene!");
+        displayListView();
     }
 
     @FXML
@@ -69,9 +70,9 @@ public class PersonGUIController implements Initializable {
     //and the ListView and keep everything else in place.
     //Lavdim leave this method as it is. We have only one ArrayList at the moment.
     public void displayListView(){
-        if(!DataHolder.simulations.isEmpty()){ //change the arraylist here.
-            for (Simulation sim : DataHolder.simulations){ //change this here
-                personListView.getItems().add(sim.getTitle());
+        if(!DataHolder.persons.isEmpty()){ //change the arraylist here.
+            for (Person person : DataHolder.persons){ //change this here
+                personListView.getItems().add(person.getName());
             }
         } else {
             personListView.getItems().add("The list is empty");
