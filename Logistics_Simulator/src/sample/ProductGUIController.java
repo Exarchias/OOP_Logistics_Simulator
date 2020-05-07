@@ -59,12 +59,14 @@ public class ProductGUIController implements Initializable {
     @FXML
     public void clickedDeleteProduct() throws Exception {
        RTools.deleteProduct(indexNumber);
+       displayListView();
     }
 
     //Displays the content of an array to the ListView. Tricky method. the idea is that you change only the array list
     //and the ListView and keep everything else in place.
     //Lavdim leave this method as it is. We have only one ArrayList at the moment.
     public void displayListView(){
+        productListView.getItems().clear();
         if(!DataHolder.products.isEmpty()){ //change the arraylist here.
             for (Product product : DataHolder.products){ //change this here
                 productListView.getItems().add(product.getTitle());

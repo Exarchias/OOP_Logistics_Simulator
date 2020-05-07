@@ -64,12 +64,14 @@ public class PersonGUIController implements Initializable {
     @FXML
     public void clickedDeletePerson() throws Exception {
         RTools.deletePerson(indexNumber);
+        displayListView();
     }
 
     //Displays the content of an array to the ListView. Tricky method. the idea is that you change only the array list
     //and the ListView and keep everything else in place.
     //Lavdim leave this method as it is. We have only one ArrayList at the moment.
     public void displayListView(){
+        personListView.getItems().clear();
         if(!DataHolder.persons.isEmpty()){ //change the arraylist here.
             for (Person person : DataHolder.persons){ //change this here
                 personListView.getItems().add(person.getName());

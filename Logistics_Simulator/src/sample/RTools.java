@@ -49,17 +49,12 @@ public class RTools {
     //please don't modify its content without asking me, (I am Robert)
     public static void startScript() {
         createASimualtion("The very first simulation");
-        Person person = new Person("Mock Person");
-        Product product = new Product("A product", 1);
-        DataHolder.personInFocus = person;
-        DataHolder.persons.add(person);
-        DataHolder.productInFocus = product;
-        DataHolder.products.add(product);
-        DataHolder.personInFocus.products.add(product);
-        DataHolder.simulationInFocus.population.add(person);
+        createAPerson("Mock Person");
+        createAProduct("a brand new product");
+        DataHolder.simulationInFocus.population.add(DataHolder.personInFocus);
     }
 
-    //This method creates a Simulation()
+    //This method creates a Simulation
     public static void createASimualtion(String nameOfSimulation) {
         Simulation sim = new Simulation(nameOfSimulation);
         DataHolder.simulations.add(sim);
@@ -67,69 +62,64 @@ public class RTools {
         System.out.println("This simulation has been created: " + nameOfSimulation);
     }
 
-    //This method creates a new Person (for now is a mock method)
+    //This method creates a new Person
     public static void createAPerson(String nameOfPerson) {
-        //Person person = new Person(nameOfPerson);
-        DataHolder.personInFocus.setName(nameOfPerson);
+        Person person = new Person(nameOfPerson);
+        DataHolder.persons.add(person);
+        DataHolder.personInFocus = person;
         System.out.println("A person has been created with the name " + nameOfPerson);
     }
 
-    //This method edits a Person (for now is a mock method)
+    //This method edits a Person
     public static void editAPerson(String nameOfPerson) {
        String previousName = DataHolder.personInFocus.getName();
-
-        String tmpName = previousName;
-
-        previousName = nameOfPerson;
-
-        nameOfPerson = previousName;
-
         DataHolder.personInFocus.setName(nameOfPerson);
-        System.out.println("A person with this name: " + tmpName +" has been edited and the new name is " + nameOfPerson);
-        System.out.println("The saved name of person is " + DataHolder.personInFocus.getName());
+        System.out.println("A person with this name: " + previousName +" has been edited and the new name is " + nameOfPerson);
+        //System.out.println("The saved name of person is " + DataHolder.personInFocus.getName());
     }
 
-    //this method deletes a pesron, (for now is a mock method)
+    //this method deletes a pesron
     public static void deletePerson(int number){
+        DataHolder.persons.remove(number);
         System.out.println("You deleted the person with the number: " + number);
     }
 
-    //This method creates a new Product (for now is a mock method)
+    //This method creates a new Product
     public static void createAProduct(String titleOfProduct) {
-        DataHolder.productInFocus.setTitle(titleOfProduct);
+        Product product = new Product(titleOfProduct, 1);
+        DataHolder.productInFocus = product;
+        DataHolder.products.add(product);
         System.out.println("A product has been created with the title " + titleOfProduct);
     }
 
     //This method edits a Product (for now is a mock method)
     public static void editAProduct(String titleOfProduct) {
         String previousTitleOfProduct = DataHolder.productInFocus.getTitle();
-        String tmpTitle = previousTitleOfProduct;
-        previousTitleOfProduct = titleOfProduct;
-        titleOfProduct = previousTitleOfProduct;
         DataHolder.productInFocus.setTitle(titleOfProduct);
-        System.out.println("A product with this title: "+tmpTitle + " has been edited and the new title is " + titleOfProduct);
+        System.out.println("A product with this title: " + previousTitleOfProduct + " has been edited and the new title is "
+                + titleOfProduct);
         System.out.println("The saved title of product is " + titleOfProduct);
     }
 
     //this method deletes a product, (for now is a mock method)
     public static void deleteProduct(int number){
+        DataHolder.products.remove(number);
         System.out.println("You deleted the product with the number: " + number);
     }
 
     //MOCK METHOD
     public static void editASimulation(String titleOfSimulation){
         String previousTitleOfSimulation = DataHolder.simulationInFocus.getTitle();
-        String tmpSimulationTitle = previousTitleOfSimulation;
-        previousTitleOfSimulation = titleOfSimulation;
-       titleOfSimulation = previousTitleOfSimulation;
         DataHolder.simulationInFocus.setTitle(titleOfSimulation);
-        System.out.println("A simulation with this name " + tmpSimulationTitle + " has been edited and the new title is " + titleOfSimulation);
+        System.out.println("A simulation with this name " + previousTitleOfSimulation + " has been edited and the new title is "
+                + titleOfSimulation);
         System.out.println("the saved title of simulation is "+ titleOfSimulation);
 
     }
 
     //this method deletes a simulation, (for now is a mock method)
     public static void deleteSimulationt(int number){
+        DataHolder.simulations.remove(number);
         System.out.println("You deleted the simulation with the number: " + number);
     }
 }

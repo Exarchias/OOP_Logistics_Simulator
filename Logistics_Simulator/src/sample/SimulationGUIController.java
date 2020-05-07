@@ -61,12 +61,14 @@ public class SimulationGUIController implements Initializable {
     @FXML
     public void clickedDeleteSimulation() throws Exception {
         RTools.deleteSimulationt(indexNumber);
+        displayListView();
     }
 
     //Displays the content of an array to the ListView. Tricky method. the idea is that you change only the array list
     //and the ListView and keep everything else in place.
     //Lavdim leave this method as it is. We have only one ArrayList at the moment.
     public void displayListView(){
+        simulationListView.getItems().clear();
         if(!DataHolder.simulations.isEmpty()){ //change the arraylist here.
             for (Simulation sim : DataHolder.simulations){ //change this here
                 simulationListView.getItems().add(sim.getTitle());
