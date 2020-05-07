@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
+import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -53,6 +54,7 @@ public class ProductGUIController implements Initializable {
 
     @FXML
     public void clickedEditProduct() throws Exception {
+        DataHolder.productInFocus = DataHolder.products.get(indexNumber);
         RTools.goToScene("editProduct");
     }
 
@@ -60,6 +62,11 @@ public class ProductGUIController implements Initializable {
     public void clickedDeleteProduct() throws Exception {
        RTools.deleteProduct(indexNumber);
        displayListView();
+    }
+
+    @FXML
+    public void somethingIsSelectedOnListView(MouseEvent event) throws Exception {
+        indexNumber = productListView.getSelectionModel().getSelectedIndex();
     }
 
     //Displays the content of an array to the ListView. Tricky method. the idea is that you change only the array list

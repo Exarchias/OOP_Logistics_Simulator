@@ -11,6 +11,6 @@
       <Button fx:id="editPersonBtn" layoutX="179.0" layoutY="287.0" mnemonicParsing="false" onMouseClicked="#clickedEditPerson" text="Edit Person" />
       <Button fx:id="deletePersonBtn" layoutX="287.0" layoutY="287.0" mnemonicParsing="false" onMouseClicked="#clickedDeletePerson" text="Delete Person" />
       <Button fx:id="toDashboardBtn" layoutX="426.0" layoutY="126.0" mnemonicParsing="false" onMouseClicked="#clickedOnToDashboard" text="Back to Dashborad" />
-      <ListView fx:id="personListView" layoutX="79.0" layoutY="39.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="personListView" layoutX="79.0" layoutY="39.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

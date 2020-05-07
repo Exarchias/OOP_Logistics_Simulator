@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
+import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -58,6 +59,7 @@ public class PersonGUIController implements Initializable {
 
     @FXML
     public void clickedEditPerson() throws Exception {
+        DataHolder.personInFocus = DataHolder.persons.get(indexNumber);
         RTools.goToScene("editPerson");
     }
 
@@ -65,6 +67,11 @@ public class PersonGUIController implements Initializable {
     public void clickedDeletePerson() throws Exception {
         RTools.deletePerson(indexNumber);
         displayListView();
+    }
+
+    @FXML
+    public void somethingIsSelectedOnListView(MouseEvent event) throws Exception {
+        indexNumber = personListView.getSelectionModel().getSelectedIndex();
     }
 
     //Displays the content of an array to the ListView. Tricky method. the idea is that you change only the array list
