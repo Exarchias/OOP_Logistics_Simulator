@@ -26,4 +26,9 @@ public class Product {
     public void setConsumptionRate(double consumptionRate) {
         this.consumptionRate = consumptionRate;
     }
+
+    public Item generateItem(){
+        Item item = new Item(title);
+        return item;
+    }
 }
