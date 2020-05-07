@@ -31,6 +31,9 @@ public class SimulationGUIController implements Initializable {
     private Button deleteSimulationBtn;
 
     @FXML
+    private Button generateOutputBtn;
+
+    @FXML
     private ListView<String> simulationListView;
 
     @FXML
@@ -64,6 +67,12 @@ public class SimulationGUIController implements Initializable {
     public void clickedDeleteSimulation() throws Exception {
         RTools.deleteSimulationt(indexNumber);
         displayListView();
+    }
+
+    @FXML
+    public void clickedGenerateOutput() throws Exception {
+        DataHolder.simulationInFocus = DataHolder.simulations.get(indexNumber);
+        RTools.goToScene("generateoutput");
     }
 
     @FXML

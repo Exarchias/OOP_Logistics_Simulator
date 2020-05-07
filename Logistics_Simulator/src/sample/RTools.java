@@ -131,4 +131,14 @@ public class RTools {
         DataHolder.outputs.remove(number);
         System.out.println("You deleted the simulation with the number: " + number);
     }
+
+    //this method deletes an output
+    public static void generateOutput(String title){
+        Output output = new Output(title);
+        output.persons.add(DataHolder.personInFocus);
+        output.persons.get(0).products.add(DataHolder.productInFocus);
+        DataHolder.outputs.add(output);
+        System.out.println("An output was produced with the title " + output.getTitle() + " and with the person "
+                + output.persons.get(0).getName() + " and the product " + output.persons.get(0).products.get(0).getTitle());
+    }
 }
