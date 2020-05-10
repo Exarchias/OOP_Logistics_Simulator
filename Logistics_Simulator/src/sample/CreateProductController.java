@@ -17,6 +17,7 @@ public class CreateProductController implements Initializable {
         //some code that starts in the loading of the scene
         RTools.kickIfNotLoggedIn();
         System.out.println("You are in the create product scene!");
+        nameTextField.setPromptText("Name of product");
     }
 
     @FXML
@@ -32,11 +33,15 @@ public class CreateProductController implements Initializable {
     @FXML
     public void clickedOnSubmit(){
         String text = nameTextField.getText();
-        if(!text.equalsIgnoreCase("")){
-            RTools.createAProduct(text);
+        if (text.length()<3||!text.matches("[a-zA-Z ,]+")){
+            nameTextField.clear();
+            nameTextField.setPromptText("Please write an appropriate product name");
         } else {
-            RTools.createAProduct("Default Product");
+            RTools.createAProduct(text);
+
         }
+
+
 
     }
 

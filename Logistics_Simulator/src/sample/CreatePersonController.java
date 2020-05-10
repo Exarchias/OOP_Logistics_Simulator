@@ -16,7 +16,7 @@ public class CreatePersonController implements Initializable {
         //some code that starts in the loading of the scene
         RTools.kickIfNotLoggedIn();
         System.out.println("You are in the create person scene!");
-        nameTextField.setPromptText("Name");
+        nameTextField.setPromptText("Name of Person");
     }
 
     @FXML
@@ -37,7 +37,8 @@ public class CreatePersonController implements Initializable {
             nameTextField.clear();
         nameTextField.setPromptText("Please write an appropriate name");
         } else {
-            RTools.createAPerson(text);
+            String output = text.substring(0, 1).toUpperCase() + text.substring(1).toLowerCase();
+            RTools.createAProduct(output);
 
         }
 
