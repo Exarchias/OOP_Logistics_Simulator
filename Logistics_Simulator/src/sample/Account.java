@@ -3,10 +3,11 @@ package sample;
 public class Account {
     private String Email;
     private String PassWord;
+    private String userName;
     //private String member_SSN;
 
-    public Account(String email, String passWord) {
-        Email = email;
+    public Account(String userName, String passWord) {
+        this.userName = userName;
         PassWord = passWord;
     }
 
@@ -26,7 +27,15 @@ public class Account {
         PassWord = passWord;
     }
 
-//    public String getMember_SSN() {
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    //    public String getMember_SSN() {
 //        return member_SSN;
 //    }
 

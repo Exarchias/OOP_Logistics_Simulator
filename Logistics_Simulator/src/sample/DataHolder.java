@@ -29,11 +29,21 @@ public class DataHolder {
 
     static ArrayList<Account> userPopulate() throws NoSuchAlgorithmException {
         ArrayList<Account> tempAr = new ArrayList<>();
-        Account tmpUser = new Account("test@test.com", "12345");
+        Account tmpUser = new Account("admin", "12345");
         //tmpUser.setEmail("Abdul@gmail.com");
         tempAr.add(tmpUser);
 
         return tempAr;
+    }
+
+    static boolean userNameExists(String userName){
+
+        for(Account account : arrayAllUsers){
+            if(account.getUserName().equalsIgnoreCase(userName)){
+                return true;
+            }
+        }
+        return false;
     }
 
     static boolean userEmailexist(String Email){

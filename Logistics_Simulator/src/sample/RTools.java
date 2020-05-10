@@ -26,6 +26,18 @@ public class RTools {
         }
         return null;
     }
+
+    static Account findUserByUsername(String userName){
+
+        for(Account account : DataHolder.arrayAllUsers){
+            if(account.getUserName().equalsIgnoreCase(userName)){
+                return  account;
+            }
+        }
+        return null;
+    }
+
+
     //This method does the logout in a specific way.
     public static void logout() throws Exception {
         DataHolder.setLoggedIn(false);

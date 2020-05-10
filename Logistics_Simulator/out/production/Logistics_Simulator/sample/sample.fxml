@@ -15,7 +15,7 @@
          <children>
             <Label layoutX="50.0" layoutY="82.0" text="" />
             <Button fx:id="loginBtn" layoutX="68.0" layoutY="173.0" mnemonicParsing="false" onAction="#clickedOnLogin" text="Login" />
-            <TextField id="txtfieldname" fx:id="txtfieldemail" layoutX="114.0" layoutY="66.0"  prefWidth="200.0" promptText="Email:" text="" />
+            <TextField id="txtfieldname" fx:id="txtFieldUserName" layoutX="114.0" layoutY="66.0"  prefWidth="200.0" promptText="Username:" text="" />
             <Label fx:id="lblstatus" layoutX="73.0" layoutY="264.0" text="Status: Waiting for login" />
             <Button layoutX="314.0" layoutY="229.0" mnemonicParsing="false" onAction="#registerButtonPressed" text="Register" />
             <PasswordField id="textpassword" fx:id="txtpassword" layoutX="114.0" layoutY="105.0" prefWidth="200.0" promptText="Password:" />

@@ -19,7 +19,7 @@ public class Controller implements Initializable {
     Button loginBtn;
 
     @FXML
-    private TextField txtfieldemail;
+    private TextField txtFieldUserName;
 
     @FXML
     private PasswordField txtpassword;
@@ -39,10 +39,10 @@ public class Controller implements Initializable {
     public void clickedOnLogin() throws Exception {
 
         Account account;
-        if (DataHolder.userEmailexist(txtfieldemail.getText()))
+        if (DataHolder.userNameExists(txtFieldUserName.getText()))
 
         {
-            account = RTools.findUserByEmail(txtfieldemail.getText());
+            account = RTools.findUserByUsername(txtFieldUserName.getText());
 
             if (RTools.checkLogin(account,txtpassword.getText())) {
                 DataHolder.activeUser = account;
