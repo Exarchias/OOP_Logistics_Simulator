@@ -33,6 +33,7 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         //some code that starts in the loading of the scene
         System.out.println("You are NOT logged In!");
+
     }
 
     @FXML
@@ -59,9 +60,26 @@ public class Controller implements Initializable {
 
 
             }
+            else {
+                DataHolder.setLoggedIn(false);
+                txtFieldUserName.clear();
+                txtpassword.clear();
+                //RTools.goToDashBoard();
+                lblstatus.setText("Please write the correct password");
+             //   System.out.println("Please write the correct password");
+
+            }
+        }else {
+            //RTools.goToScene("dashboard");
+            DataHolder.setLoggedIn(false);
+            txtFieldUserName.clear();
+            txtpassword.clear();
+           // RTools.goToDashBoard();
+            lblstatus.setText("Please write the correct username");
+           // System.out.println("Please write the correct username");
         }
-        //RTools.goToScene("dashboard");
-        RTools.goToDashBoard();
+
+
     }
 
     public void registerButtonPressed() throws Exception {

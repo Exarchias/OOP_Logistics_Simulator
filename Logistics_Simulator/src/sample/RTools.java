@@ -62,6 +62,7 @@ public class RTools {
             Main.getInstance().setScene("dashboard"); //this little line does the transition to the other scene.
         } else {
             Main.getInstance().setScene("sample"); //this little line does the transition to the other scene.
+
         }
     }
 

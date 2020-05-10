@@ -9,14 +9,14 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="CENTER" hgap="10.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <AnchorPane prefHeight="458.0" prefWidth="465.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
          <children>
             <Label layoutX="50.0" layoutY="82.0" text="" />
             <Button fx:id="loginBtn" layoutX="68.0" layoutY="173.0" mnemonicParsing="false" onAction="#clickedOnLogin" text="Login" />
-            <TextField id="txtfieldname" fx:id="txtFieldUserName" layoutX="114.0" layoutY="66.0"  prefWidth="200.0" promptText="Username:" text="" />
-            <Label fx:id="lblstatus" layoutX="73.0" layoutY="264.0" text="Status: Waiting for login" />
+            <TextField id="txtfieldname" fx:id="txtFieldUserName" layoutX="114.0" layoutY="66.0" prefWidth="200.0" promptText="Username:" text="" />
+            <Label fx:id="lblstatus" layoutX="73.0" layoutY="264.0" onMouseClicked="#clickedOnLogin" text="Status: Waiting for login" />
             <Button layoutX="314.0" layoutY="229.0" mnemonicParsing="false" onAction="#registerButtonPressed" text="Register" />
             <PasswordField id="textpassword" fx:id="txtpassword" layoutX="114.0" layoutY="105.0" prefWidth="200.0" promptText="Password:" />
          </children>
