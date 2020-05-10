@@ -34,11 +34,14 @@ public class EditProductController implements Initializable {
     @FXML
     public void clickedOnSubmit() {
         String text = nameTextField.getText();
-        if (!text.equalsIgnoreCase("")) {
-            RTools.editAProduct(text);
+        if (text.length()<3||!text.matches("[a-zA-Z ,]+")){
+            nameTextField.clear();
+            nameTextField.setPromptText("Please write an appropriate product name");
         } else {
-            RTools.editAProduct("Defeault Product");
+            RTools.editAProduct(text);
+
         }
+   
 
     }
 
