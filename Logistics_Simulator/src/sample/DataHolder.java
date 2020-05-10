@@ -12,13 +12,12 @@ public class DataHolder {
     public static ArrayList<Product> products = new ArrayList<>();
     public static ArrayList<Person> persons = new ArrayList<>();
     public static ArrayList<Output> outputs = new ArrayList<>();
-
-
-    static Account activeUser;
-    static boolean isAdmin;
-    static Account userInFocus;
-
     static ArrayList<Account> arrayAllUsers; //users as a normal Arraylist
+    static Account activeUser; //we leaving it in for reasons of generalization
+    static Account userInFocus; //we leaving it in for reasons of generalization
+    //static boolean isAdmin; //We will not have Admin in this structure.
+
+
     static {
         try {
             arrayAllUsers = userPopulate();
@@ -26,11 +25,12 @@ public class DataHolder {
             e.printStackTrace();
         }
     }
+
+
     static ArrayList<Account> userPopulate() throws NoSuchAlgorithmException {
         ArrayList<Account> tempAr = new ArrayList<>();
-        Account tmpUser = new Account("Abdul@gmail.com", "admin", "199412046253");
-        tmpUser.setEmail("Abdul@gmail.com");
-        tmpUser.setMember_SSN("199412046253");
+        Account tmpUser = new Account("test@test.com", "12345");
+        //tmpUser.setEmail("Abdul@gmail.com");
         tempAr.add(tmpUser);
 
         return tempAr;
