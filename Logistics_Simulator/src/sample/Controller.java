@@ -74,6 +74,7 @@ public class Controller implements Initializable {
             DataHolder.setLoggedIn(false);
             txtFieldUserName.clear();
             txtpassword.clear();
+
            // RTools.goToDashBoard();
             lblstatus.setText("Please write the correct username");
            // System.out.println("Please write the correct username");
