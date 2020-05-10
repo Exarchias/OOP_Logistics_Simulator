@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditSimulationController">
    <children>
-      <TextField fx:id="simulationTxtField" layoutX="319.0" layoutY="109.0" />
+      <TextField fx:id="simulationTxtField" layoutX="319.0" layoutY="109.0" prefHeight="25.0" prefWidth="187.0" />
       <Button fx:id="submitBtn" layoutX="368.0" layoutY="188.0" mnemonicParsing="false" onAction="#clickedOnSubmit" text="Submit" />
       <Button fx:id="goToDashboarBtn" layoutX="368.0" layoutY="249.0" mnemonicParsing="false" onAction="#clickedOnToDashboard" text="goToDashboard" />
    </children>

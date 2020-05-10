@@ -13,7 +13,7 @@ public class CreateSimulationController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         RTools.kickIfNotLoggedIn();
         System.out.println("You are in the create simulation scene");
-
+        txtTitle.setPromptText("Name of Title");
     }
 
     @FXML
@@ -27,11 +27,15 @@ public class CreateSimulationController implements Initializable {
     @FXML
     public void clickedOnSubmit(){
         String title = txtTitle.getText();
-        if (!title.equalsIgnoreCase("")){
+
+        if (title.length()<3||!title.matches("[a-zA-Z ,]+")){
+            txtTitle.clear();
+            txtTitle.setPromptText("Please write an appropriate title");
+        } else {
             RTools.createASimualtion(title);
-        }else {
-            RTools.createASimualtion("Default Simulation");
+
         }
+
 
 
     }

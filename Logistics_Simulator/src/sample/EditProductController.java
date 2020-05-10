@@ -41,7 +41,7 @@ public class EditProductController implements Initializable {
             RTools.editAProduct(text);
 
         }
-   
+
 
     }
 

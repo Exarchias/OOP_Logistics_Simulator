@@ -26,11 +26,15 @@ public class EditSimulationController implements Initializable {
     @FXML
     public void clickedOnSubmit(){
         String title = simulationTxtField.getText();
-        if (!title.equalsIgnoreCase("")){
+
+        if (title.length()<3||!title.matches("[a-zA-Z ,]+")){
+            simulationTxtField.clear();
+            simulationTxtField.setPromptText("Please write an appropriate title");
+        } else {
             RTools.editASimulation(title);
-        }else {
-            RTools.editASimulation("Default Simulation");
+
         }
+
 
     }
   @FXML
