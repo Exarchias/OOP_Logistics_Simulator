@@ -2,6 +2,7 @@ package sample;
 
 import javafx.scene.control.ListView;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 public class RTools {
@@ -16,12 +17,31 @@ public class RTools {
             Main.getInstance().setScene("sample"); //this little line does the transition to the other scene.
         }
     }
+    static Account findUserByEmail(String Email){
 
+        for(Account account : DataHolder.arrayAllUsers){
+            if(account.getEmail().equalsIgnoreCase(Email)){
+                return  account;
+            }
+        }
+        return null;
+    }
     //This method does the logout in a specific way.
     public static void logout() throws Exception {
         DataHolder.setLoggedIn(false);
         Main.getInstance().setScene("sample"); //this little line does the transition to the other scene.
     }
+
+
+    static boolean checkLogin(Account account, String password)  {
+        if(account.getPassWord().equals(password)){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
 
     //This method takes the user to the dashboard.
     //but if the user is not logged in he gets kicked to login page

@@ -8,8 +8,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private Stage primaryStage; //multiple scenes configuration
-    private static Main instance = null; //multiple scenes configuration
+    private static Stage primaryStage; //multiple scenes configuration
+    private static Main instance = null; //multiple scenes configuratio
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -28,6 +28,19 @@ public class Main extends Application {
     }
 
 
+    // i need this method to change scenes in different controller classes
+    private static void loadView(String nameOfView) {
+        try {
+            Parent root = FXMLLoader.load(Main.class.getResource(nameOfView + ".fxml"));
+
+
+            primaryStage.setScene(new Scene(root));
+            primaryStage.show();
+        } catch (Exception ex) {
+            ex.printStackTrace(); //Most likely something wrong with loading files.
+        }
+    }
+
     //multiple scenes configuration
     //This method is the one that loads the new scene.
     public void setScene(String nameOfScene) throws Exception {
@@ -45,4 +58,11 @@ public class Main extends Application {
     public static Main getInstance() {
         return instance;
     }
+
+
+    public static void LoadRegisterView() throws Exception {
+        loadView("../view/RegisterAccount");
+
+    }
+
 }

@@ -3,6 +3,9 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 import java.io.Serializable;
 import java.net.URL;
@@ -15,6 +18,15 @@ public class Controller implements Initializable {
     @FXML
     Button loginBtn;
 
+    @FXML
+    private TextField txtfieldemail;
+
+    @FXML
+    private PasswordField txtpassword;
+
+    @FXML
+    private Label lblstatus;
+
     //All the scenes should implement the Initializable interface
     //The code inside initialize is the one that runs when the scene is loaded.
     @Override
@@ -25,11 +37,39 @@ public class Controller implements Initializable {
 
     @FXML
     public void clickedOnLogin() throws Exception {
-        DataHolder.setLoggedIn(true);
+
+        Account account;
+        if (DataHolder.userEmailexist(txtfieldemail.getText()))
+
+        {
+            account = RTools.findUserByEmail(txtfieldemail.getText());
+
+            if (RTools.checkLogin(account,txtpassword.getText())) {
+                DataHolder.activeUser = account;
+                DataHolder.userInFocus = account;
+
+                DataHolder.setLoggedIn(true);
+                // DataHolder.isAdmin = user.isAdmin();
+                //move to new activity. This little part maybe in need of small edit,
+                // (depends on the Activity which it is in)
+                // change an activity when user logged in send to User page // tell to @Abdi
+                RTools.goToDashBoard();
+
+
+
+
+            }
+        }
         //RTools.goToScene("dashboard");
         RTools.goToDashBoard();
     }
 
+    public void registerButtonPressed() throws Exception {
+        Main.LoadRegisterView();
 
 
+    }
 }
+
+
+
