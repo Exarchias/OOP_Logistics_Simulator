@@ -4,11 +4,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditPersonController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditPersonController">
     <children>
         <Button fx:id="submitBtn" layoutX="386.0" layoutY="237.0" mnemonicParsing="false" onMouseClicked="#clickedOnSubmit" text="submit" />
         <Button fx:id="toDashboardBtn" layoutX="386.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#clickedOnToDashboard" text="To Dashboard" />
-        <TextField fx:id="nameTextField" layoutX="289.0" layoutY="141.0" />
+        <TextField fx:id="nameTextField" layoutX="289.0" layoutY="141.0" prefHeight="25.0" prefWidth="194.0" />
     </children>
 </AnchorPane>
-

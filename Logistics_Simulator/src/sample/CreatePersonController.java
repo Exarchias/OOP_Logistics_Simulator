@@ -35,7 +35,7 @@ public class CreatePersonController implements Initializable {
         String text = nameTextField.getText();
         if (text.length()<3||!text.matches("[a-zA-Z ,]+")){
             nameTextField.clear();
-        nameTextField.setPromptText("Please write a name");
+        nameTextField.setPromptText("Please write an appropriate name");
         } else {
             RTools.createAPerson(text);
 

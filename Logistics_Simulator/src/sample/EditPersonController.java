@@ -35,11 +35,16 @@ public class EditPersonController implements Initializable {
     @FXML
     public void clickedOnSubmit(){
         String text = nameTextField.getText();
-        if(!text.equalsIgnoreCase("")){
-            RTools.editAPerson(text);
+        if (text.length()<3||!text.matches("[a-zA-Z ,]+")){
+            //nameTextField.setText(DataHolder.personInFocus.getName());
+              nameTextField.clear();
+            nameTextField.setPromptText("Please write an appropriate name");
         } else {
-            RTools.editAPerson("Default Person");
+            RTools.editAPerson(text);
+
         }
+
+
 
     }
 
