@@ -4,6 +4,10 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 public class DataHolder {
+
+    static boolean dbActivated = false; //when we want to run with database
+    static boolean isConnected = false;
+    static Account testAccount;
     private static boolean LoggedIn = false;
     public static Person personInFocus;
     public static Product productInFocus;
@@ -66,4 +70,6 @@ public class DataHolder {
     public static void setLoggedIn(boolean isLoggedIn) {
         DataHolder.LoggedIn = isLoggedIn;
     }
+
+
 }
