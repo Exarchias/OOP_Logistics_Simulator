@@ -57,15 +57,13 @@ public class Controller implements Initializable {
                 RTools.goToDashBoard();
 
 
-
-
             }
             else {
                 DataHolder.setLoggedIn(false);
                 txtFieldUserName.clear();
                 txtpassword.clear();
                 //RTools.goToDashBoard();
-                lblstatus.setText("Please write the correct password");
+                lblstatus.setText("Please write the correct username or password");
              //   System.out.println("Please write the correct password");
 
             }
@@ -76,7 +74,7 @@ public class Controller implements Initializable {
             txtpassword.clear();
 
            // RTools.goToDashBoard();
-            lblstatus.setText("Please write the correct username");
+            lblstatus.setText("Please write the correct username or password");
            // System.out.println("Please write the correct username");
         }
 

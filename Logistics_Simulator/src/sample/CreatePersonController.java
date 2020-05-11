@@ -33,12 +33,15 @@ public class CreatePersonController implements Initializable {
     @FXML
     public void clickedOnSubmit(){
         String text = nameTextField.getText();
-        if (text.length()<3||!text.matches("[a-zA-Z ,]+")){
+        //The old check is stored here: (title.length()<3||!title.matches("[a-zA-Z ,]+"))
+        //It is necessary for someone to be able to give number to its personss.
+        //The thing with the length is very clever though
+        if (text.length()<3){
             nameTextField.clear();
         nameTextField.setPromptText("Please write an appropriate name");
         } else {
             String output = text.substring(0, 1).toUpperCase() + text.substring(1).toLowerCase();
-            RTools.createAProduct(output);
+            RTools.createAPerson(output);
 
         }
 

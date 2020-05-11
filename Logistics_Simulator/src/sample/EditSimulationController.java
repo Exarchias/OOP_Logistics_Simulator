@@ -27,7 +27,10 @@ public class EditSimulationController implements Initializable {
     public void clickedOnSubmit(){
         String title = simulationTxtField.getText();
 
-        if (title.length()<3||!title.matches("[a-zA-Z ,]+")){
+        //The old check is stored here: (title.length()<3||!title.matches("[a-zA-Z ,]+"))
+        //It is necessary for someone to be able to give number to its simulations.
+        //The thing with the length is very clever though
+        if (title.length()<3){
             simulationTxtField.clear();
             simulationTxtField.setPromptText("Please write an appropriate title");
         } else {

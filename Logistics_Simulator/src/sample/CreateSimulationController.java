@@ -28,7 +28,10 @@ public class CreateSimulationController implements Initializable {
     public void clickedOnSubmit(){
         String title = txtTitle.getText();
 
-        if (title.length()<3||!title.matches("[a-zA-Z ,]+")){
+        //The old check is stored here: (title.length()<3||!title.matches("[a-zA-Z ,]+"))
+        //It is necessary for someone to be able to give number to its simulations.
+        //The thing with the length is very clever though
+        if (title.length()<3){
             txtTitle.clear();
             txtTitle.setPromptText("Please write an appropriate title");
         } else {

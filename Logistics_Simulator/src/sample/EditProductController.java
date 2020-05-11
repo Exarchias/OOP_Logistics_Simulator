@@ -34,7 +34,10 @@ public class EditProductController implements Initializable {
     @FXML
     public void clickedOnSubmit() {
         String text = nameTextField.getText();
-        if (text.length()<3||!text.matches("[a-zA-Z ,]+")){
+        //The old check is stored here: (title.length()<3||!title.matches("[a-zA-Z ,]+"))
+        //It is necessary for someone to be able to give number to its products.
+        //The thing with the length is very clever though
+        if (text.length()<3){
             nameTextField.clear();
             nameTextField.setPromptText("Please write an appropriate product name");
         } else {
