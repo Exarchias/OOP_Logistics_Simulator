@@ -73,6 +73,10 @@ public class GenerateOutputController implements Initializable {
     }
     @FXML
     public void addPersonToGeneration()throws Exception{
+        Person x = temporaryPersonsForDisplay.get(indexNumberPerson);
+        temporaryPersonsForOutput.add(x);
+        displayListViewPerson2();
+
 
     }
 
