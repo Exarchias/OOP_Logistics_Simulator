@@ -27,6 +27,7 @@ public class GenerateOutputController implements Initializable {
         temporaryPersonsForDisplay = DataHolder.persons;
         displayListViewPerson();
         displayListViewProduct();
+        displayListViewPerson2();
         titleTextField.setText("The output of " + DataHolder.simulationInFocus.getTitle());
         System.out.println("You are in the generate output scene!");
 
@@ -124,7 +125,19 @@ public class GenerateOutputController implements Initializable {
         } else {
             productListView.getItems().add("The list is empty");
         }
+
         productListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+    }
+    public void displayListViewPerson2(){
+        personListView2.getItems().clear();
+        if (!temporaryPersonsForOutput.isEmpty()){
+            for (Person person:temporaryPersonsForOutput){
+                personListView2.getItems().add(person.getName());
+            }
+        }else {
+            personListView2.getItems().add("The personlist2 is empty");
+        }
+        personListView2.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
 

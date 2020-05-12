@@ -5,13 +5,16 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GenerateOutputController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GenerateOutputController">
     <children>
         <ListView fx:id="personListView" layoutX="46.0" layoutY="100.0" onMouseClicked="#somethingIsSelectedPerson" prefHeight="200.0" prefWidth="163.0" />
-        <Button fx:id="logoutBtn" layoutX="454.0" layoutY="64.0" mnemonicParsing="false" onMouseClicked="#clickedOnLogout" text="logout" />
-        <Button fx:id="goToDashboardBtn" layoutX="454.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#clickedOnToDashboard" text="Go Back to Dashboard" />
-      <ListView fx:id="productListView" layoutX="241.0" layoutY="100.0" onMouseClicked="#somethingIsSelectedProduct" prefHeight="200.0" prefWidth="163.0" />
-      <Button fx:id="generateBtn" layoutX="176.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#clickedGenerateOutput" text="Generate" />
+        <Button fx:id="logoutBtn" layoutX="368.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#clickedOnLogout" text="logout" />
+        <Button fx:id="goToDashboardBtn" layoutX="439.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#clickedOnToDashboard" text="Go Back to Dashboard" />
+      <ListView fx:id="productListView" layoutX="228.0" layoutY="100.0" onMouseClicked="#somethingIsSelectedProduct" prefHeight="200.0" prefWidth="163.0" />
+      <Button fx:id="generateBtn" layoutX="46.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#clickedGenerateOutput" text="Generate" />
       <TextField fx:id="titleTextField" layoutX="46.0" layoutY="32.0" />
+      <Button fx:id="btnAssignProductToPerson" layoutX="157.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#assignProductToPerson" text="Assign Product To Person" />
+      <Button fx:id="btnAddPersonToGeneration" layoutX="360.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#addPersonToGeneration" text="Add Person To Generation" />
+      <ListView fx:id="personListView2" layoutX="415.0" layoutY="100.0" onMouseClicked="#somethingIsSelectedPerson2" prefHeight="200.0" prefWidth="156.0" />
     </children>
 </AnchorPane>
