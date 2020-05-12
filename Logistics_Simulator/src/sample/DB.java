@@ -47,6 +47,7 @@ public class DB {
 
     //here we enable java to actually execute MySQL statements
     public void loadUsers() throws NoSuchAlgorithmException {
+        DataHolder.userPopulate();
         if (DataHolder.dbActivated) {
             try {
                 if(DataHolder.isConnected){
@@ -58,13 +59,15 @@ public class DB {
                         String name = rs.getString(2);
                         String password = rs.getString(3);
                         Account user1 = new Account(name, password);
-                        DataHolder.testAccount = user1;
+                        DataHolder.arrayAllUsers.add(user1);
+                        DataHolder.testAccount = user1; //this is redundant.
                         System.out.println("The online mode user: " + name + " is loaded to the application");
                     }
                 } else {
                     //this runs when the database is down
                     Account firstUser = new Account("testuser", "123456");
-                    DataHolder.testAccount = firstUser;
+                    DataHolder.testAccount = firstUser; //this is reduntnat
+                    DataHolder.arrayAllUsers.add(firstUser);
                     System.out.println("Verification: The offline mode User is " + DataHolder.testAccount.getUserName());
                 }
                 System.out.println("The password is 12345");

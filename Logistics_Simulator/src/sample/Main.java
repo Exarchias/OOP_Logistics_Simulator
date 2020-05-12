@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.security.NoSuchAlgorithmException;
+
 public class Main extends Application {
 
     private static Stage primaryStage; //multiple scenes configuration
@@ -26,6 +28,11 @@ public class Main extends Application {
     public static void main(String[] args) {
         RTools.startScript(); //initializes the application correctly
         db.doAHandshake();
+        try {
+            db.loadUsers();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
         launch(args);
     }
 

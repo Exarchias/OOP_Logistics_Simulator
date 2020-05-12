@@ -16,28 +16,20 @@ public class DataHolder {
     public static ArrayList<Product> products = new ArrayList<>();
     public static ArrayList<Person> persons = new ArrayList<>();
     public static ArrayList<Output> outputs = new ArrayList<>();
-    static ArrayList<Account> arrayAllUsers; //users as a normal Arraylist
+    public static ArrayList<Account> arrayAllUsers = new ArrayList<>(); //the users of the system
     static Account activeUser; //we leaving it in for reasons of generalization
     static Account userInFocus; //we leaving it in for reasons of generalization
     //static boolean isAdmin; //We will not have Admin in this structure.
 
 
-    static {
-        try {
-            arrayAllUsers = userPopulate();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-    }
 
-
-    static ArrayList<Account> userPopulate() throws NoSuchAlgorithmException {
-        ArrayList<Account> tempAr = new ArrayList<>();
+    //populated the array aarayAllUsers with a hardcoded users. great for offline mode.
+    //also it ensures that at least one user will be always stable to the system
+    //this will be called from the loader, (its default work before check for connection)
+    static void userPopulate() {
         Account tmpUser = new Account("admin", "12345");
-        //tmpUser.setEmail("Abdul@gmail.com");
-        tempAr.add(tmpUser);
-
-        return tempAr;
+        arrayAllUsers.add(tmpUser);
+        System.out.println("The default user was added with the name " + tmpUser.getUserName() + " and the password 12345");
     }
 
     static boolean userNameExists(String userName){
