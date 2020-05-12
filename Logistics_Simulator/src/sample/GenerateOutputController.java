@@ -16,6 +16,7 @@ public class GenerateOutputController implements Initializable {
 
     int indexNumberPerson = 0;
     int indexNumberProduct = 0;
+    int indexNumberPerson2 = 0;
     ArrayList<Person> temporaryPersonsForDisplay; //this is for NOT using the one we have from DataHolder.
     ArrayList<Person> temporaryPersonsForOutput = new ArrayList<>(); //This for filling it with users that are meant
     //to be sent to the generated outcome.
@@ -30,8 +31,11 @@ public class GenerateOutputController implements Initializable {
         System.out.println("You are in the generate output scene!");
 
     }
+    @FXML
+    private Button btnAssignProductToPerson;
 
-
+    @FXML
+    private Button btnAddPersonToGeneration;
 
     @FXML
     private TextField titleTextField;
@@ -41,6 +45,8 @@ public class GenerateOutputController implements Initializable {
 
     @FXML
     private ListView<String> productListView;
+
+    @FXML ListView<String> personListView2;
 
     @FXML
     private Button generateBtn;
@@ -59,6 +65,14 @@ public class GenerateOutputController implements Initializable {
     @FXML
     public void clickedOnToDashboard() throws Exception {
         RTools.goToDashBoard();
+    }
+    @FXML
+    public void assignProductToPerson()throws Exception{
+
+    }
+    @FXML
+    public void addPersonToGeneration()throws Exception{
+
     }
 
 
@@ -79,6 +93,11 @@ public class GenerateOutputController implements Initializable {
     @FXML
     public void somethingIsSelectedProduct(MouseEvent event) throws Exception {
         indexNumberProduct = productListView.getSelectionModel().getSelectedIndex();
+    }
+
+    @FXML
+    public void somethingIsSelectedPerson2(MouseEvent event)throws Exception{
+        indexNumberPerson2 = personListView2.getSelectionModel().getSelectedIndex();
     }
 
     //Displays the content of an array to the ListView. Tricky method. the idea is that you change only the array list
@@ -107,4 +126,6 @@ public class GenerateOutputController implements Initializable {
         }
         productListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
+
+
 }
