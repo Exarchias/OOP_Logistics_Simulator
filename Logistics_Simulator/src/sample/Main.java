@@ -10,6 +10,7 @@ public class Main extends Application {
 
     private static Stage primaryStage; //multiple scenes configuration
     private static Main instance = null; //multiple scenes configuratio
+    static DB db = new DB();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -24,6 +25,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         RTools.startScript(); //initializes the application correctly
+        db.doAHandshake();
         launch(args);
     }
 
