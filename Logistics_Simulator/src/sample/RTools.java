@@ -166,12 +166,12 @@ public class RTools {
     }
 
     //this method deletes an output
-    public static void generateOutput(String title){
+    public static void generateOutput(String title, ArrayList<Person> personsArrayList){
         Output output = new Output(title);
-        output.persons.add(DataHolder.personInFocus);
-        output.persons.get(0).products.add(DataHolder.productInFocus);
+        output.persons = personsArrayList;
+        //output.persons.add(DataHolder.personInFocus); //this will have to go
+        //output.persons.get(0).products.add(DataHolder.productInFocus); //this will have to go.
         DataHolder.outputs.add(output);
-        System.out.println("An output was produced with the title " + output.getTitle() + " and with the person "
-                + output.persons.get(0).getName() + " and the product " + output.persons.get(0).products.get(0).getTitle());
+        System.out.println("An output was produced with the title " + output.getTitle());
     }
 }
