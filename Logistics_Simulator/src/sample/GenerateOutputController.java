@@ -69,6 +69,14 @@ public class GenerateOutputController implements Initializable {
     }
     @FXML
     public void assignProductToPerson()throws Exception{
+        Person person = temporaryPersonsForDisplay.get(indexNumberPerson);
+        Product product = DataHolder.products.get(indexNumberProduct);
+
+        person.products.add(product);
+        //DataHolder.products.add(indexNumberPerson,product);
+       // temporaryPersonsForDisplay.add(indexNumberProduct,person);
+
+        //displayListViewPerson();
 
     }
     @FXML
