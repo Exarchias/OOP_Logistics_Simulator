@@ -92,10 +92,11 @@ public class GenerateOutputController implements Initializable {
     @FXML
     //this method will have to change.
     public void clickedGenerateOutput() throws Exception {
-        DataHolder.personInFocus = DataHolder.persons.get(indexNumberPerson); //this will have to leave
-        DataHolder.productInFocus = DataHolder.products.get(indexNumberProduct); //this will have to leave
+        //DataHolder.personInFocus = DataHolder.persons.get(indexNumberPerson); //this will have to leave
+        //DataHolder.productInFocus = DataHolder.products.get(indexNumberProduct); //this will have to leave
         String title = titleTextField.getText(); //this will stay as it is
         RTools.generateOutput(title, temporaryPersonsForOutput); //this will stay as it is. Exactly as it is.
+        RTools.goToScene("outputDisplay");
     }
 
     @FXML
