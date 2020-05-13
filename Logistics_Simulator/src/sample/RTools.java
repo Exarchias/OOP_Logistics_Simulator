@@ -172,6 +172,7 @@ public class RTools {
         //output.persons.add(DataHolder.personInFocus); //this will have to go
         //output.persons.get(0).products.add(DataHolder.productInFocus); //this will have to go.
         DataHolder.outputs.add(output);
+        DataHolder.outputInFocus = output;
         System.out.println("An output was produced with the title " + output.getTitle());
     }
 }

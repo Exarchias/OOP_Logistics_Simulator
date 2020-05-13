@@ -12,6 +12,7 @@ public class DataHolder {
     public static Person personInFocus;
     public static Product productInFocus;
     public static Simulation simulationInFocus;
+    public static Output outputInFocus;
     public static ArrayList<Simulation> simulations = new ArrayList<>();
     public static ArrayList<Product> products = new ArrayList<>();
     public static ArrayList<Person> persons = new ArrayList<>();
