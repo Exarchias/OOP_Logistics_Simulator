@@ -93,4 +93,41 @@ public class TestScripts {
     public static boolean task10 (){
         return true;
     }
+
+    public static boolean task11 (){
+        return true;
+    }
+
+    public static boolean task12 (){
+        return true;
+    }
+
+    public static boolean task13 (){
+        return true;
+    }
+
+    public static boolean task14 (){
+        return true;
+    }
+
+    public static boolean task15 (){
+        return true;
+    }
+
+    public static boolean task16 (){
+        return true;
+    }
+
+    public static boolean task17 (){
+        return true;
+    }
+
+    public static boolean task18 (){
+        return true;
+    }
+
+    public static boolean task19 (){
+        return true;
+    }
+
 }
