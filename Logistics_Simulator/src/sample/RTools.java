@@ -84,7 +84,17 @@ public class RTools {
         Output output = new Output("an output");
         createASimualtion("The very first simulation");
         createAPerson("Mock Person");
+        createAPerson("Aklilu");
+        createAPerson("Ingemar");
+        createAPerson("Abdullah");
+        createAPerson("Lavdim");
+        createAPerson("Robert");
         createAProduct("a brand new product");
+        createAProduct("Coca cola");
+        createAProduct("Pepsi");
+        createAProduct("Fanta");
+        createAProduct("Sprite");
+        createAProduct("Julmust");
         DataHolder.simulationInFocus.population.add(DataHolder.personInFocus);
         output.persons = DataHolder.persons;
         DataHolder.outputs.add(output);
