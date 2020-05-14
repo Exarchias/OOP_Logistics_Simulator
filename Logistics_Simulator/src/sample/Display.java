@@ -9,7 +9,6 @@ public class Display {
     //For displaying the details of a person
     public static String displayPerson(Person person){
         String msg= "";
-        msg = msg + " \n";
         msg = "Name: " + person.getName();
         msg = msg + " \n";
         return msg;
@@ -19,7 +18,6 @@ public class Display {
     //For displaying the details of a person
     public static String displayDetailedPerson(Person person){
         String msg= "";
-        msg = msg + " \n";
         msg = msg + displayPerson(person) + "\n";
         msg = msg + displayProductsList(person.products) + "\n";
         msg = msg + " \n";
@@ -84,6 +82,27 @@ public class Display {
         msg = msg + " \n";
         msg = msg + displayOutput(output) + "\n";
         msg = msg + displayPersonsList(output.persons) + "\n";
+        msg = msg + " \n";
+        return msg;
+    }
+
+    //For displaying the details of a output
+    public static String displayExtraDetailedOutput(Output output){
+        String msg= "";
+        msg = msg + " \n";
+        msg = msg + displayOutput(output) + "\n";
+        msg = msg + displayDetailedPersonsList(output.persons) + "\n";
+        msg = msg + " \n";
+        return msg;
+    }
+
+
+    //For displaying the details of a output
+    public static String displaySuperExtraDetailedOutput(Output output){
+        String msg= "";
+        msg = msg + " \n";
+        msg = msg + displayOutput(output) + "\n";
+        msg = msg + displayExtraDetailedPersonsList(output.persons) + "\n";
         msg = msg + " \n";
         return msg;
     }
