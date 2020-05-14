@@ -2,31 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/CreatePersonController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/CreateProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/CreateSimulationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/DB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/DashBoardController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/DataHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/EditPersonController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/EditProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/EditSimulationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/GenerateOutputController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Output.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/OutputGUIController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/PersonGUIController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/ProductGUIController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/RTools.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Simulation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/SimulationGUIController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/TestScripts.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Display.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -118,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/OutputDisplayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
+            <state relative-caret-position="1088">
               <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -130,8 +105,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            <state relative-caret-position="-34">
+              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -320,7 +295,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589392612037" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589419247008" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -520,6 +495,7 @@
       <workItem from="1589391908531" duration="757000" />
       <workItem from="1589394267274" duration="62000" />
       <workItem from="1589415877554" duration="1201000" />
+      <workItem from="1589417175857" duration="2185000" />
     </task>
     <servers />
   </component>
@@ -541,13 +517,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52213000" />
+    <option name="totallyTimeSpent" value="54398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21331316" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21633889" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -863,6 +838,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/OutputDisplayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/outputDisplay.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor" />
@@ -899,20 +884,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/OutputDisplayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Display.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        <state relative-caret-position="-34">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
         </state>
       </provider>
     </entry>
