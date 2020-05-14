@@ -70,55 +70,49 @@ public class TestScriptsTest {
     @Test
     public void task11() {
         boolean expected = true;
-        Assert.assertEquals(expected, TestScripts.task10());
+        Assert.assertEquals(expected, TestScripts.task11());
     }
 
     @Test
     public void task12() {
         boolean expected = true;
-        Assert.assertEquals(expected, TestScripts.task10());
+        Assert.assertEquals(expected, TestScripts.task12());
     }
 
     @Test
     public void task13() {
         boolean expected = true;
-        Assert.assertEquals(expected, TestScripts.task10());
+        Assert.assertEquals(expected, TestScripts.task13());
     }
 
     @Test
     public void task14() {
         boolean expected = true;
-        Assert.assertEquals(expected, TestScripts.task10());
+        Assert.assertEquals(expected, TestScripts.task14());
     }
 
     @Test
     public void task15() {
         boolean expected = true;
-        Assert.assertEquals(expected, TestScripts.task10());
+        Assert.assertEquals(expected, TestScripts.task15());
     }
 
     @Test
     public void task16() {
         boolean expected = true;
-        Assert.assertEquals(expected, TestScripts.task10());
+        Assert.assertEquals(expected, TestScripts.task16());
     }
 
     @Test
     public void task17() {
         boolean expected = true;
-        Assert.assertEquals(expected, TestScripts.task10());
+        Assert.assertEquals(expected, TestScripts.task17());
     }
 
     @Test
     public void task18() {
         boolean expected = true;
-        Assert.assertEquals(expected, TestScripts.task10());
-    }
-
-    @Test
-    public void task19() {
-        boolean expected = true;
-        Assert.assertEquals(expected, TestScripts.task10());
+        Assert.assertEquals(expected, TestScripts.task18());
     }
 
 }

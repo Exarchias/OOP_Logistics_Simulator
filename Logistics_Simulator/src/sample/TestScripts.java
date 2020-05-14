@@ -1,5 +1,7 @@
 package sample;
 
+import java.nio.file.Files;
+
 public class TestScripts {
 
     public static boolean task1 (){
@@ -95,39 +97,95 @@ public class TestScripts {
     }
 
     public static boolean task11 (){
-        return true;
+        Boolean answer = false;
+        try {
+            Class cls = Class.forName("sample.Controller");
+            System.out.println("Controller.Java exists");
+            answer =true;
+        } catch (ClassNotFoundException e) {
+            answer = false;
+            e.printStackTrace();
+            System.out.println("Controller.Java not found");
+        }
+        return answer;
     }
 
     public static boolean task12 (){
-        return true;
+        Account user = new Account("blah", "12345");
+        return RTools.checkLogin(user, "12345");
     }
 
     public static boolean task13 (){
-        return true;
+        DB db = new DB();
+        return DataHolder.isConnected;
     }
 
     public static boolean task14 (){
-        return true;
+        boolean answer = false;
+        DB db = new DB();
+        try{
+            db.doAHandshake();
+            answer = true;
+        } catch (Exception ex){
+            answer = false;
+        }
+        return answer;
     }
 
     public static boolean task15 (){
-        return true;
+        Boolean answer = false;
+        try {
+            Class cls = Class.forName("sample.Account");
+            System.out.println("The system has users");
+            answer =true;
+        } catch (ClassNotFoundException e) {
+            answer = false;
+            e.printStackTrace();
+            System.out.println("the system does not have users");
+        }
+        return answer;
     }
 
     public static boolean task16 (){
-        return true;
+        Boolean answer = false;
+        try {
+            Class cls = Class.forName("sample.OutputGUIController");
+            System.out.println("The Output GUI is functional");
+            answer =true;
+        } catch (ClassNotFoundException e) {
+            answer = false;
+            e.printStackTrace();
+            System.out.println("the Output GUI is not functional");
+        }
+        return answer;
     }
 
     public static boolean task17 (){
-        return true;
+        Boolean answer = false;
+        try {
+            Class cls = Class.forName("sample.OutputDisplayController");
+            System.out.println("The Output Display is functional");
+            answer =true;
+        } catch (ClassNotFoundException e) {
+            answer = false;
+            e.printStackTrace();
+            System.out.println("the Output Display is not functional");
+        }
+        return answer;
     }
 
     public static boolean task18 (){
-        return true;
-    }
-
-    public static boolean task19 (){
-        return true;
+        Boolean answer = false;
+        try {
+            Class cls = Class.forName("sample.Display");
+            System.out.println("We have display for the outputs");
+            answer =true;
+        } catch (ClassNotFoundException e) {
+            answer = false;
+            e.printStackTrace();
+            System.out.println("We don't have display for the outputs");
+        }
+        return answer;
     }
 
 }
