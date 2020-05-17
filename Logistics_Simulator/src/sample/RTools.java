@@ -179,6 +179,8 @@ public class RTools {
     public static void generateOutput(String title, int days, ArrayList<Person> personsArrayList){
         Output output = new Output(title, days);
         output.persons = personsArrayList;
+        output.itemsForTheDays();
+        //output.displayLogs();
         //output.persons.add(DataHolder.personInFocus); //this will have to go
         //output.persons.get(0).products.add(DataHolder.productInFocus); //this will have to go.
         DataHolder.outputs.add(output);

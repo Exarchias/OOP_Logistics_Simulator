@@ -7,6 +7,7 @@ public class Output {
     private Simulation simulation;
     private int days = 0;
     public ArrayList<Person> persons = new ArrayList<>();
+    public ArrayList<String> logs = new ArrayList<>();
 
     public Output(String title, int days) {
         this.title = title;
@@ -36,5 +37,32 @@ public class Output {
 
     public void setSimulation(Simulation simulation) {
         this.simulation = simulation;
+    }
+
+    //When it is called, (once per day), it adds an item to each user for each product the user has.
+    void itemForTheDay(int day){
+        //System.out.println("itemForTheDay() runs");
+        for(Person person : persons){
+            //System.out.println("it loops through all the persons");
+            for(Product product : person.products){
+                //System.out.println("it loops through the persons items");
+                person.items.add(product.generateItem());
+                logs.add("Day:" + day + " The item " + product.getTitle() +  " was given to " + person.getName());
+                //System.out.println("Day:" + day + " The item " + product.getTitle() +  " was given to " + person.getName());
+            }
+        }
+    }
+
+    void itemsForTheDays(){
+        for(int x=0; x<days; x++){
+            //System.out.println("Day: " + x);
+            itemForTheDay(x);
+        }
+    }
+
+    void displayLogs(){
+        for(String x: logs){
+            System.out.println(x);
+        }
     }
 }
