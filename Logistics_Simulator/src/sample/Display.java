@@ -21,7 +21,7 @@ public class Display {
         String msg= "";
         msg = msg + displayPerson(person) + "\n";
         msg = msg + displayProductsList(person.products) + "\n";
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -31,7 +31,7 @@ public class Display {
         String msg= "";
         //msg = msg + " \n";
         msg = msg + "Title: " + product.getTitle()+ " \n";
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -41,7 +41,7 @@ public class Display {
         String msg= "";
         //msg = msg + " \n";
         msg = msg + displayProduct(product) + "\n";
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -51,7 +51,7 @@ public class Display {
         String msg= "";
         //msg = msg + " \n";
         msg = msg + "Title: " + simulation.getTitle() + " \n";
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -62,7 +62,7 @@ public class Display {
         //msg = msg + " \n";
         msg = msg + displaySimulation(simulation) + "\n";
         msg = msg + displayPersonsList(simulation.population) + "\n";
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -73,7 +73,7 @@ public class Display {
         //msg = msg + " \n";
         msg = msg + "Title: " + output.getTitle() + " \n";
         msg = msg + "Belongs to " + output.getSimulation().getTitle() + " simulation. \n";
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -84,7 +84,7 @@ public class Display {
         //msg = msg + " \n";
         msg = msg + displayOutput(output) + "\n";
         msg = msg + displayPersonsList(output.persons) + "\n";
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -94,7 +94,7 @@ public class Display {
         //msg = msg + " \n";
         msg = msg + displayOutput(output) + "\n";
         msg = msg + displayDetailedPersonsList(output.persons) + "\n";
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -105,7 +105,7 @@ public class Display {
         //msg = msg + " \n";
         msg = msg + displayOutput(output) + "\n";
         msg = msg + displayExtraDetailedPersonsList(output.persons) + "\n";
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -121,7 +121,7 @@ public class Display {
             count++;
             msg = msg + "" + count + ")" + x.getTitle() + "\n";
         }
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -136,7 +136,7 @@ public class Display {
             count++;
             msg = msg + "" + count + ")" + displayProduct(x) + "\n";
         }
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -152,7 +152,7 @@ public class Display {
             count++;
             msg = msg + "" + count + ")" + x.getName() + "\n";
         }
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -168,7 +168,7 @@ public class Display {
             count++;
             msg = msg + "" + count + ")" + displayPerson(x) + "\n";
         }
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -183,7 +183,7 @@ public class Display {
             count++;
             msg = msg + "" + count + ")" + displayDetailedPerson(x) + "\n";
         }
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -199,7 +199,7 @@ public class Display {
             count++;
             msg = msg + "" + count + ")" + x.getTitle() + "\n";
         }
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -215,7 +215,7 @@ public class Display {
             count++;
             msg = msg + "" + count + ")" + displaySimulation(x) + "\n";
         }
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -231,7 +231,7 @@ public class Display {
             count++;
             msg = msg + "" + count + ")" + displayDetailedSimulation(x) + "\n";
         }
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -247,7 +247,7 @@ public class Display {
             count++;
             msg = msg + "" + count + ")" + x.getTitle() + "\n";
         }
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -263,7 +263,7 @@ public class Display {
             count++;
             msg = msg + "" + count + ")" + displayOutput(x) + "\n";
         }
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
@@ -279,7 +279,7 @@ public class Display {
             count++;
             msg = msg + "" + count + ")" + displayDetailedOutput(x) + "\n";
         }
-        msg = msg + " \n";
+        //msg = msg + " \n";
         return msg;
     }
 
