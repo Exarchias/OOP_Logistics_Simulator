@@ -81,7 +81,7 @@ public class RTools {
     //This method is added to the main. is like the initialization but for the applacation.
     //please don't modify its content without asking me, (I am Robert)
     public static void startScript() {
-        Output output = new Output("an output");
+        Output output = new Output("an output", 1);
         createASimualtion("The very first simulation");
         createAPerson("Mock Person");
         createAPerson("Aklilu");
@@ -176,8 +176,8 @@ public class RTools {
     }
 
     //this method deletes an output
-    public static void generateOutput(String title, ArrayList<Person> personsArrayList){
-        Output output = new Output(title);
+    public static void generateOutput(String title, int days, ArrayList<Person> personsArrayList){
+        Output output = new Output(title, days);
         output.persons = personsArrayList;
         //output.persons.add(DataHolder.personInFocus); //this will have to go
         //output.persons.get(0).products.add(DataHolder.productInFocus); //this will have to go.

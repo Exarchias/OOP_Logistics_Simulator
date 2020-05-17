@@ -17,6 +17,7 @@ public class GenerateOutputController implements Initializable {
     int indexNumberPerson = 0;
     int indexNumberProduct = 0;
     int indexNumberPerson2 = 0;
+    int days = 0;
     ArrayList<Person> temporaryPersonsForDisplay; //this is for NOT using the one we have from DataHolder.
     ArrayList<Person> temporaryPersonsForOutput = new ArrayList<>(); //This for filling it with users that are meant
     //to be sent to the generated outcome.
@@ -28,6 +29,7 @@ public class GenerateOutputController implements Initializable {
         displayListViewPerson();
         displayListViewProduct();
         displayListViewPerson2();
+        daysTextField.setText(String.valueOf(days));
         titleTextField.setText("The output of " + DataHolder.simulationInFocus.getTitle());
         System.out.println("You are in the generate output scene!");
 
@@ -40,6 +42,9 @@ public class GenerateOutputController implements Initializable {
 
     @FXML
     private TextField titleTextField;
+
+    @FXML
+    private TextField daysTextField;
 
     @FXML
     private ListView<String> personListView;
@@ -94,8 +99,9 @@ public class GenerateOutputController implements Initializable {
     public void clickedGenerateOutput() throws Exception {
         //DataHolder.personInFocus = DataHolder.persons.get(indexNumberPerson); //this will have to leave
         //DataHolder.productInFocus = DataHolder.products.get(indexNumberProduct); //this will have to leave
+        days = Integer.parseInt(daysTextField.getText());
         String title = titleTextField.getText(); //this will stay as it is
-        RTools.generateOutput(title, temporaryPersonsForOutput); //this will stay as it is. Exactly as it is.
+        RTools.generateOutput(title, days, temporaryPersonsForOutput); //this will stay as it is. Exactly as it is.
         RTools.goToScene("outputDisplay");
     }
 
