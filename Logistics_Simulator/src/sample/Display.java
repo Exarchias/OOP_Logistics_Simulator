@@ -11,6 +11,7 @@ public class Display {
         String msg= "";
         msg = msg + "Name: " + person.getName() + "\n";
         msg = msg + "Consumes " + person.products.size() + " products \n";
+        msg = msg + "" + person.displayquantities() + " \n";
         msg = msg + " \n";
         return msg;
     }

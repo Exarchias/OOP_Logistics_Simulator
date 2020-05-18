@@ -51,6 +51,7 @@ public class Output {
             for(Product product : person.products){
                 //System.out.println("it loops through the persons items");
                 person.items.add(product.generateItem());
+                person.countQuantity(product.getTitle(), 1);
                 countQuantity(product.getTitle(), 1);
                 logs.add("Day:" + day + " The item " + product.getTitle() +  " was given to " + person.getName());
                 //System.out.println("Day:" + day + " The item " + product.getTitle() +  " was given to " + person.getName());
