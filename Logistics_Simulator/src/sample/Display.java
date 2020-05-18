@@ -74,6 +74,7 @@ public class Display {
         msg = msg + "Title: " + output.getTitle() + " \n";
         msg = msg + "Belongs to " + output.getSimulation().getTitle() + " simulation. \n";
         msg = msg + "duration: " + output.getDays() + " days. \n";
+        msg = msg + "" + output.displayquantities() + " \n";
         //msg = msg + " \n";
         return msg;
     }

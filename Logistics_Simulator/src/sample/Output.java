@@ -1,6 +1,9 @@
 package sample;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class Output {
     private String title = "an output";
@@ -8,6 +11,7 @@ public class Output {
     private int days = 0;
     public ArrayList<Person> persons = new ArrayList<>();
     public ArrayList<String> logs = new ArrayList<>();
+    HashMap<String, Integer> quantities = new HashMap<>();
 
     public Output(String title, int days) {
         this.title = title;
@@ -47,6 +51,7 @@ public class Output {
             for(Product product : person.products){
                 //System.out.println("it loops through the persons items");
                 person.items.add(product.generateItem());
+                countQuantity(product.getTitle(), 1);
                 logs.add("Day:" + day + " The item " + product.getTitle() +  " was given to " + person.getName());
                 //System.out.println("Day:" + day + " The item " + product.getTitle() +  " was given to " + person.getName());
             }
@@ -66,5 +71,34 @@ public class Output {
             msg = msg + x + "\n";
         }
         return msg;
+    }
+
+    //counts the quantity of consumed items
+    void countQuantity(String itemName, int itemCount){
+        if(!quantities.containsKey(itemName)){
+            quantities.put(itemName, itemCount);
+        } else {
+            quantities.put(itemName, quantities.get(itemName) + itemCount);
+        }
+    }
+
+
+    //display the quantity of all items
+    String displayquantities(){
+        String msg = "ITEMS \n";
+        msg = msg + " ===== \n";
+        if (quantities.isEmpty()) {
+            msg = msg + "no items were consumed";
+        }
+
+        else {
+            Iterator it = quantities.entrySet().iterator();
+            while (it.hasNext()) {
+                Map.Entry pair = (Map.Entry)it.next();
+                msg = msg + pair.getKey() + ": " + pair.getValue() + " items \n";
+                //System.out.println(pair.getKey() + " = " + pair.getValue());
+            }
+        }
+        return  msg;
     }
 }
