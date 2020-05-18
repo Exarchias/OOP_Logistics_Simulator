@@ -18,6 +18,7 @@ public class GenerateOutputController implements Initializable {
     int indexNumberProduct = 0;
     int indexNumberPerson2 = 0;
     int days = 0;
+    int multiplicator = 1; //multiplies each person of the population by that number
     ArrayList<Person> temporaryPersonsForDisplay; //this is for NOT using the one we have from DataHolder.
     ArrayList<Person> temporaryPersonsForOutput = new ArrayList<>(); //This for filling it with users that are meant
     //to be sent to the generated outcome.
@@ -45,6 +46,9 @@ public class GenerateOutputController implements Initializable {
 
     @FXML
     private TextField daysTextField;
+
+    @FXML
+    private TextField multiplicatorTextField;
 
     @FXML
     private ListView<String> personListView;
@@ -100,8 +104,20 @@ public class GenerateOutputController implements Initializable {
         //DataHolder.personInFocus = DataHolder.persons.get(indexNumberPerson); //this will have to leave
         //DataHolder.productInFocus = DataHolder.products.get(indexNumberProduct); //this will have to leave
         days = Integer.parseInt(daysTextField.getText());
+        multiplicator = Integer.parseInt(multiplicatorTextField.getText());
         String title = titleTextField.getText(); //this will stay as it is
-        RTools.generateOutput(title, days, temporaryPersonsForOutput); //this will stay as it is. Exactly as it is.
+        if(multiplicator > 1){
+            ArrayList<Person> tmpPersons = new ArrayList<>();
+            for(Person person : temporaryPersonsForOutput){
+                for(int x = 0; x < multiplicator; x++ ){
+                    Person tmpPerson = person;
+                    tmpPersons.add(tmpPerson);
+                }
+            }
+            RTools.generateOutput(title, days, tmpPersons);
+        } else {
+            RTools.generateOutput(title, days, temporaryPersonsForOutput);
+        }
         RTools.goToScene("outputDisplay");
     }
 
