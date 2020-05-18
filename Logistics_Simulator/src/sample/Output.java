@@ -60,9 +60,11 @@ public class Output {
         }
     }
 
-    void displayLogs(){
+    String displayLogs(){
+        String msg = "";
         for(String x: logs){
-            System.out.println(x);
+            msg = msg + x + "\n";
         }
+        return msg;
     }
 }

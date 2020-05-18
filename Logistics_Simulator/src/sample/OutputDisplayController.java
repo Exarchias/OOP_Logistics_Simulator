@@ -22,6 +22,9 @@ public class OutputDisplayController implements Initializable {
     TextArea displayTextArea;
 
     @FXML
+    Button logsBtn;
+
+    @FXML
     Button mode1Btn;
 
     @FXML
@@ -60,6 +63,11 @@ public class OutputDisplayController implements Initializable {
     @FXML
     public void clickedMode3(){
         displayTextArea.setText(Display.displaySuperExtraDetailedOutput(DataHolder.outputInFocus));
+    }
+
+    @FXML
+    public void clickedLogs(){
+        displayTextArea.setText(DataHolder.outputInFocus.displayLogs());
     }
 
 }

@@ -12,5 +12,6 @@
       <Button fx:id="mode1Btn" layoutX="79.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#clickedMode1" text="Mode 1" />
       <Button fx:id="mode2Btn" layoutX="157.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#clickedMode2" text="Mode 2" />
       <Button fx:id="mode3Btn" layoutX="228.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#clickedMode3" text="Mode 3" />
+      <Button fx:id="logsBtn" layoutX="300.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#clickedLogs" text="Logs" />
         </children>
 </AnchorPane>
