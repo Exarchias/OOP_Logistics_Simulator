@@ -95,6 +95,8 @@ public class RTools {
         createAProduct("Fanta");
         createAProduct("Sprite");
         createAProduct("Julmust");
+        createAProductWithRate("the half", 0.5);
+        createAProductWithRate("the double", 2);
         DataHolder.simulationInFocus.population.add(DataHolder.personInFocus);
         output.persons = DataHolder.persons;
         DataHolder.outputs.add(output);
@@ -133,6 +135,14 @@ public class RTools {
     //This method creates a new Product
     public static void createAProduct(String titleOfProduct) {
         Product product = new Product(titleOfProduct, 1);
+        DataHolder.productInFocus = product;
+        DataHolder.products.add(product);
+        System.out.println("A product has been created with the title " + titleOfProduct);
+    }
+
+    //This method creates a new Product
+    public static void createAProductWithRate(String titleOfProduct, double consumptionRate) {
+        Product product = new Product(titleOfProduct, consumptionRate);
         DataHolder.productInFocus = product;
         DataHolder.products.add(product);
         System.out.println("A product has been created with the title " + titleOfProduct);

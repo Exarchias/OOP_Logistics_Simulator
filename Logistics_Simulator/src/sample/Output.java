@@ -1,9 +1,6 @@
 package sample;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class Output {
     private String title = "an output";
@@ -12,6 +9,7 @@ public class Output {
     public ArrayList<Person> persons = new ArrayList<>();
     public ArrayList<String> logs = new ArrayList<>();
     HashMap<String, Integer> quantities = new HashMap<>();
+    Random r = new Random();
 
     public Output(String title, int days) {
         this.title = title;
@@ -50,11 +48,28 @@ public class Output {
             //System.out.println("it loops through all the persons");
             for(Product product : person.products){
                 //System.out.println("it loops through the persons items");
-                person.items.add(product.generateItem());
-                person.countQuantity(product.getTitle(), 1);
-                countQuantity(product.getTitle(), 1);
-                logs.add("Day:" + day + " The item " + product.getTitle() +  " was given to " + person.getName());
-                //System.out.println("Day:" + day + " The item " + product.getTitle() +  " was given to " + person.getName());
+                if(product.getConsumptionRate() < 1){
+                    double low = 0;
+                    double high = 1;
+                    double result = r.nextDouble();
+                    if(result < product.getConsumptionRate()){
+                        person.items.add(product.generateItem());
+                        person.countQuantity(product.getTitle(), 1);
+                        countQuantity(product.getTitle(), 1);
+                        logs.add("Day:" + day + " The item " + product.getTitle() +  " was given to " + person.getName());
+                    }
+
+                } else {
+                    int count = 0;
+                    for(int x = 0; x < product.getConsumptionRate(); x++){
+                        count++;
+                        person.items.add(product.generateItem());
+                    }
+                    person.countQuantity(product.getTitle(), count);
+                    countQuantity(product.getTitle(), count);
+                    logs.add("Day:" + day + " The item " + product.getTitle() +  " was given to " + person.getName());
+                    //System.out.println("Day:" + day + " The item " + product.getTitle() +  " was given to " + person.getName());
+                }
             }
         }
     }
