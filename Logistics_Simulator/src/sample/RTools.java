@@ -95,8 +95,11 @@ public class RTools {
         createAProduct("Fanta");
         createAProduct("Sprite");
         createAProduct("Julmust");
+        createAPerson("Average person");
         createAProductWithRate("the half", 0.5);
         createAProductWithRate("the double", 2);
+        createAProductWithRate("Intensive Care Unit", 0.002); //2% times 100 days
+        createASimualtion("COVID19");
         DataHolder.simulationInFocus.population.add(DataHolder.personInFocus);
         output.persons = DataHolder.persons;
         DataHolder.outputs.add(output);

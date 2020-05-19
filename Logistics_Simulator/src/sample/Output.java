@@ -6,6 +6,7 @@ public class Output {
     private String title = "an output";
     private Simulation simulation;
     private int days = 0;
+    private boolean researchQuestion = false;
     public ArrayList<Person> persons = new ArrayList<>();
     public ArrayList<String> logs = new ArrayList<>();
     HashMap<String, Integer> quantities = new HashMap<>();
@@ -39,6 +40,14 @@ public class Output {
 
     public void setSimulation(Simulation simulation) {
         this.simulation = simulation;
+    }
+
+    public boolean isResearchQuestion() {
+        return researchQuestion;
+    }
+
+    public void setResearchQuestion(boolean researchQuestion) {
+        this.researchQuestion = researchQuestion;
     }
 
     //When it is called, (once per day), it adds an item to each user for each product the user has.
