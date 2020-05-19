@@ -99,7 +99,7 @@ public class RTools {
         createAProductWithRate("the half", 0.5);
         createAProductWithRate("the double", 2);
         createAProductWithRate("Intensive Care Unit", 0.002); //2% times 100 days
-        createASimualtion("COVID19");
+        createASimualtionWithResearchQuestion("COVID19");
         DataHolder.simulationInFocus.population.add(DataHolder.personInFocus);
         output.persons = DataHolder.persons;
         DataHolder.outputs.add(output);
@@ -108,6 +108,15 @@ public class RTools {
     //This method creates a Simulation
     public static void createASimualtion(String nameOfSimulation) {
         Simulation sim = new Simulation(nameOfSimulation);
+        DataHolder.simulations.add(sim);
+        DataHolder.simulationInFocus = sim;
+        System.out.println("This simulation has been created: " + nameOfSimulation);
+    }
+
+    //This method creates a Simulation
+    public static void createASimualtionWithResearchQuestion(String nameOfSimulation) {
+        Simulation sim = new Simulation(nameOfSimulation);
+        sim.setResearchQuestion(true);
         DataHolder.simulations.add(sim);
         DataHolder.simulationInFocus = sim;
         System.out.println("This simulation has been created: " + nameOfSimulation);

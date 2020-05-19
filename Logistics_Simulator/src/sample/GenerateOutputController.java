@@ -26,11 +26,20 @@ public class GenerateOutputController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         RTools.kickIfNotLoggedIn();
-        temporaryPersonsForDisplay = DataHolder.persons;
+        if(DataHolder.simulationInFocus.isResearchQuestion()){
+            temporaryPersonsForDisplay = new ArrayList<>();
+            temporaryPersonsForDisplay.add(new Person("average person"));
+            daysTextField.setText(String.valueOf(1000));
+            multiplicatorTextField.setText(String.valueOf(1000));
+
+        } else{
+            temporaryPersonsForDisplay = DataHolder.persons;
+            daysTextField.setText(String.valueOf(days));
+        }
+        //temporaryPersonsForDisplay = DataHolder.persons;
         displayListViewPerson();
         displayListViewProduct();
         displayListViewPerson2();
-        daysTextField.setText(String.valueOf(days));
         titleTextField.setText("The output of " + DataHolder.simulationInFocus.getTitle());
         System.out.println("You are in the generate output scene!");
 
@@ -101,23 +110,41 @@ public class GenerateOutputController implements Initializable {
     @FXML
     //this method will have to change.
     public void clickedGenerateOutput() throws Exception {
-        //DataHolder.personInFocus = DataHolder.persons.get(indexNumberPerson); //this will have to leave
-        //DataHolder.productInFocus = DataHolder.products.get(indexNumberProduct); //this will have to leave
-        days = Integer.parseInt(daysTextField.getText());
-        multiplicator = Integer.parseInt(multiplicatorTextField.getText());
-        String title = titleTextField.getText(); //this will stay as it is
-        if(multiplicator > 1){
-            ArrayList<Person> tmpPersons = new ArrayList<>();
-            for(Person person : temporaryPersonsForOutput){
+        if(DataHolder.simulationInFocus.isResearchQuestion()){
+            days = 1000;
+            multiplicator = 1000;
+            String title = titleTextField.getText(); //this will stay as it is
+            if(multiplicator > 1){
+                ArrayList<Person> tmpPersons = new ArrayList<>();
                 for(int x = 0; x < multiplicator; x++ ){
-                    Person tmpPerson = person;
+                    Person tmpPerson = new Person("Average Person #" + x);
+                    //2% times 100 days
+                    tmpPerson.products.add(new Product("Intensive Care Unit", 0.002));
                     tmpPersons.add(tmpPerson);
                 }
+                RTools.generateOutput(title, days, tmpPersons);
+            } else {
+                RTools.generateOutput(title, days, temporaryPersonsForOutput);
             }
-            RTools.generateOutput(title, days, tmpPersons);
         } else {
-            RTools.generateOutput(title, days, temporaryPersonsForOutput);
+            days = Integer.parseInt(daysTextField.getText());
+            multiplicator = Integer.parseInt(multiplicatorTextField.getText());
+            String title = titleTextField.getText(); //this will stay as it is
+            if(multiplicator > 1){
+                ArrayList<Person> tmpPersons = new ArrayList<>();
+                for(Person person : temporaryPersonsForOutput){
+                    for(int x = 0; x < multiplicator; x++ ){
+                        Person tmpPerson = person;
+                        tmpPersons.add(tmpPerson);
+                    }
+                }
+                RTools.generateOutput(title, days, tmpPersons);
+            } else {
+                RTools.generateOutput(title, days, temporaryPersonsForOutput);
+            }
         }
+        //DataHolder.personInFocus = DataHolder.persons.get(indexNumberPerson); //this will have to leave
+        //DataHolder.productInFocus = DataHolder.products.get(indexNumberProduct); //this will have to leave
         RTools.goToScene("outputDisplay");
     }
 
@@ -153,24 +180,32 @@ public class GenerateOutputController implements Initializable {
 
     public void displayListViewProduct(){
         productListView.getItems().clear();
-        if(!DataHolder.products.isEmpty()){ //change the arraylist here.
-            for (Product product : DataHolder.products){ //change this here
-                productListView.getItems().add(product.getTitle());
-            }
+        if(DataHolder.simulationInFocus.isResearchQuestion()){
+            productListView.getItems().add("Intensive Care Unit");
         } else {
-            productListView.getItems().add("The list is empty");
+            if(!DataHolder.products.isEmpty()){ //change the arraylist here.
+                for (Product product : DataHolder.products){ //change this here
+                    productListView.getItems().add(product.getTitle());
+                }
+            } else {
+                productListView.getItems().add("The list is empty");
+            }
         }
 
         productListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
     public void displayListViewPerson2(){
         personListView2.getItems().clear();
-        if (!temporaryPersonsForOutput.isEmpty()){
-            for (Person person:temporaryPersonsForOutput){
-                personListView2.getItems().add(person.getName());
+        if(DataHolder.simulationInFocus.isResearchQuestion()){
+            personListView2.getItems().add("average person");
+        } else {
+            if (!temporaryPersonsForOutput.isEmpty()){
+                for (Person person:temporaryPersonsForOutput){
+                    personListView2.getItems().add(person.getName());
+                }
+            }else {
+                personListView2.getItems().add("The personlist2 is empty");
             }
-        }else {
-            personListView2.getItems().add("The personlist2 is empty");
         }
         personListView2.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
