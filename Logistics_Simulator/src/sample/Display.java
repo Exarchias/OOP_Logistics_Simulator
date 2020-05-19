@@ -5,6 +5,17 @@ import java.util.ArrayList;
 public class Display {
 
 
+    //For displaying the details of a person
+    public static String displayresearchQuestion(int totalbeds){
+        String msg= "";
+        msg = msg + "================= \n";
+        msg = msg + "Research Question \n";
+        msg = msg + "================= \n";
+        msg = msg + RTools.researchQuestionAlgorithm(totalbeds) + "\n";
+        msg = msg + "================= \n";
+        msg = msg + " \n";
+        return msg;
+    }
 
     //For displaying the details of a person
     public static String displayPerson(Person person){

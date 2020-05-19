@@ -15,7 +15,16 @@ public class OutputDisplayController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         RTools.kickIfNotLoggedIn();
         System.out.println("You are in the outputs' GUI scene!");
-        displayTextArea.setText(Display.displayDetailedOutput(DataHolder.outputInFocus));
+        //displayTextArea.setText(Display.displayDetailedOutput(DataHolder.outputInFocus));
+        String msg = "";
+        if(DataHolder.simulationInFocus.isResearchQuestion()){
+            //displayTextArea.setText(Display.displayresearchQuestion(DataHolder.outputInFocus.quantities.get("Intensive Care Unit")));
+            msg = msg + Display.displayresearchQuestion(DataHolder.outputInFocus.quantities.
+                    get("Intensive Care Unit")) + " \n";
+        }
+        //displayTextArea.setText(Display.displayDetailedOutput(DataHolder.outputInFocus));
+        msg = msg + Display.displayDetailedOutput(DataHolder.outputInFocus) + " \n";
+        displayTextArea.setText(msg);
     }
 
     @FXML
@@ -52,17 +61,41 @@ public class OutputDisplayController implements Initializable {
 
     @FXML
     public void clickedMode1() {
-        displayTextArea.setText(Display.displayDetailedOutput(DataHolder.outputInFocus));
+        String msg = "";
+        if(DataHolder.simulationInFocus.isResearchQuestion()){
+            //displayTextArea.setText(Display.displayresearchQuestion(DataHolder.outputInFocus.quantities.get("Intensive Care Unit")));
+            msg = msg + Display.displayresearchQuestion(DataHolder.outputInFocus.quantities.
+                    get("Intensive Care Unit")) + " \n";
+        }
+        //displayTextArea.setText(Display.displayDetailedOutput(DataHolder.outputInFocus));
+        msg = msg + Display.displayDetailedOutput(DataHolder.outputInFocus) + " \n";
+        displayTextArea.setText(msg);
     }
 
     @FXML
     public void clickedMode2(){
-        displayTextArea.setText(Display.displayExtraDetailedOutput(DataHolder.outputInFocus));
+        String msg = "";
+        if(DataHolder.simulationInFocus.isResearchQuestion()){
+            //displayTextArea.setText(Display.displayresearchQuestion(DataHolder.outputInFocus.quantities.get("Intensive Care Unit")));
+            msg = msg + Display.displayresearchQuestion(DataHolder.outputInFocus.quantities.
+                    get("Intensive Care Unit")) + " \n";
+        }
+        msg = msg + Display.displayExtraDetailedOutput(DataHolder.outputInFocus) + " \n";
+        //displayTextArea.setText(Display.displayExtraDetailedOutput(DataHolder.outputInFocus));
+        displayTextArea.setText(msg);
     }
 
     @FXML
     public void clickedMode3(){
-        displayTextArea.setText(Display.displaySuperExtraDetailedOutput(DataHolder.outputInFocus));
+        String msg = "";
+        if(DataHolder.simulationInFocus.isResearchQuestion()){
+            //displayTextArea.setText(Display.displayresearchQuestion(DataHolder.outputInFocus.quantities.get("Intensive Care Unit")));
+            msg = msg + Display.displayresearchQuestion(DataHolder.outputInFocus.quantities.
+                    get("Intensive Care Unit")) + " \n";
+        }
+        //displayTextArea.setText(Display.displaySuperExtraDetailedOutput(DataHolder.outputInFocus));
+        msg = msg + Display.displaySuperExtraDetailedOutput(DataHolder.outputInFocus) + " \n";
+        displayTextArea.setText(msg);
     }
 
     @FXML

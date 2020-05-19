@@ -208,4 +208,53 @@ public class RTools {
         DataHolder.outputInFocus = output;
         System.out.println("An output was produced with the title " + output.getTitle());
     }
+
+    public static String researchQuestionAlgorithm(int totalBeds){
+        String msg = "";
+        msg = msg + "For 1000 people and for the duration of 1000 days \n ";
+        msg = msg + "In total " + totalBeds + " Days at Intensive Care Units needed \n ";
+        int bedsPerDay = totalBeds / 1000;
+        msg = msg + bedsPerDay + " Intensive Care Units needed to be available every day \n ";
+        if(bedsPerDay < 0){
+            msg = msg + "The accuracy of the simulation is bellow 30% \n ";
+        }
+
+        if((bedsPerDay >= 0)&&(bedsPerDay < 2)){
+            msg = msg + "The accuracy of the simulation is 50% \n ";
+        }
+
+        else if((bedsPerDay >= 2)&&(bedsPerDay < 3)){
+            msg = msg + "The accuracy of the simulation is 75% \n ";
+        }
+
+        else if((bedsPerDay >= 3)&&(bedsPerDay < 4)){
+            msg = msg + "The accuracy of the simulation is 90% \n ";
+        }
+
+        else if((bedsPerDay >= 4)&&(bedsPerDay < 6)){
+            msg = msg + "The accuracy of the simulation is above 95% \n ";
+        }
+
+        else if((bedsPerDay >= 6)&&(bedsPerDay < 7)){
+            msg = msg + "The accuracy of the simulation is 90% \n ";
+        }
+
+        else if((bedsPerDay >= 7)&&(bedsPerDay < 8)){
+            msg = msg + "The accuracy of the simulation is 75% \n ";
+        }
+
+        else if((bedsPerDay >= 8)&&(bedsPerDay < 9)){
+            msg = msg + "The accuracy of the simulation is 50% \n ";
+        }
+
+        else if(bedsPerDay >= 9){
+            msg = msg + "The accuracy of the simulation is bellow 30% \n ";
+        }
+
+        else {
+            msg = msg + "The accuracy of the simulation is 0% \n ";
+        }
+
+        return msg;
+    }
 }

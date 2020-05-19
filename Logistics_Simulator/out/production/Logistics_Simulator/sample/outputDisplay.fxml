@@ -6,9 +6,9 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OutputDisplayController">
         <children>
-                <Button fx:id="logoutBtn" layoutX="454.0" layoutY="64.0" mnemonicParsing="false" onMouseClicked="#clickedOnLogout" text="logout" />
-                <Button fx:id="goToDashboardBtn" layoutX="454.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#clickedOnToDashboard" text="Go Back to Dashboard" />
-      <TextArea fx:id="displayTextArea" layoutX="48.0" layoutY="38.0" prefHeight="282.0" prefWidth="359.0" />
+                <Button fx:id="logoutBtn" layoutX="516.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#clickedOnLogout" text="logout" />
+                <Button fx:id="goToDashboardBtn" layoutX="364.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#clickedOnToDashboard" text="Go Back to Dashboard" />
+      <TextArea fx:id="displayTextArea" layoutX="48.0" layoutY="38.0" prefHeight="282.0" prefWidth="515.0" />
       <Button fx:id="mode1Btn" layoutX="79.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#clickedMode1" text="Mode 1" />
       <Button fx:id="mode2Btn" layoutX="157.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#clickedMode2" text="Mode 2" />
       <Button fx:id="mode3Btn" layoutX="228.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#clickedMode3" text="Mode 3" />
