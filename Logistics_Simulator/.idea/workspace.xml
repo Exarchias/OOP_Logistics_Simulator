@@ -2,37 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/CreatePersonController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/CreateProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/CreateSimulationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/DB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/DashBoardController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/DataHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/EditPersonController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/EditProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/EditSimulationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/GenerateOutputController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Output.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/OutputGUIController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/PersonGUIController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/ProductGUIController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/RTools.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/Simulation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/SimulationGUIController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Logistics_Simulator/sample/TestScripts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logistics_Simulator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Logistics_Simulator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/DataHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/DataHolder.java" afterDir="false" />
     </list>
-    <ignored path="JavaFxApplication.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,91 +60,6 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/RTools.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1342">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1672">
-              <caret line="85" selection-start-line="85" selection-end-line="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/DataHolder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/DashBoardController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1518">
-              <caret line="74" column="55" selection-start-line="74" selection-start-column="55" selection-end-line="74" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/DB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/EditProductController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -255,6 +145,7 @@
     <option name="width" value="1388" />
     <option name="height" value="790" />
   </component>
+  <component name="ProjectId" id="2KgMYoIAFEl5lKo3ToF5C9lehpZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -297,6 +188,10 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -317,7 +212,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -340,19 +235,13 @@
       <recent name="C:\hkrDoc\New folder\OOP_Logistics_Simulator\Logistics_Simulator\src\sample" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -364,12 +253,6 @@
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
-    </configuration>
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
@@ -389,18 +272,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in Logistics_Simulator (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Logistics_Simulator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -453,6 +324,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestScriptsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Logistics_Simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sample" />
+      <option name="MAIN_CLASS_NAME" value="sample.TestScriptsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -464,6 +354,7 @@
       </method>
     </configuration>
     <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
@@ -485,22 +376,23 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.All in Logistics_Simulator (1)" />
       <item itemvalue="JUnit.All in Logistics_Simulator (2)" />
       <item itemvalue="JUnit.All in Logistics_Simulator (3)" />
       <item itemvalue="JUnit.All in Logistics_Simulator (4)" />
       <item itemvalue="JUnit.All in Logistics_Simulator (5)" />
+      <item itemvalue="JUnit.TestScriptsTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestScriptsTest" />
         <item itemvalue="JUnit.All in Logistics_Simulator (5)" />
         <item itemvalue="JUnit.All in Logistics_Simulator (4)" />
         <item itemvalue="JUnit.All in Logistics_Simulator (3)" />
         <item itemvalue="JUnit.All in Logistics_Simulator (2)" />
-        <item itemvalue="JUnit.All in Logistics_Simulator (1)" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>

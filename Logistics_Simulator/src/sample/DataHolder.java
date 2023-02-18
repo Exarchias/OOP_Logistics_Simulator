@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class DataHolder {
 
-    static boolean dbActivated = true; //when we want to run with database
+    static boolean dbActivated = false; //when we want to run with database
     static boolean isConnected = false;
     static Account testAccount;
     private static boolean LoggedIn = false;
